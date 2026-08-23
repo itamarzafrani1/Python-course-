@@ -6688,19 +6688,62 @@ const Bry = {
     window.__PY_OUT = "";
     window.__PY_CODE = 3;
 
+    // Brython כותב שגיאות לקונסול. לוכדים אותן כדי שיהיה מה להראות.
+    const logs = [];
+    const orig = { log: console.log, error: console.error, warn: console.warn };
+    const grab = fn => (...a) => {
+      try { logs.push(a.map(x => (typeof x === "string" ? x : String(x))).join(" ")); } catch (e) {}
+      try { fn.apply(console, a); } catch (e) {}
+    };
+    console.log = grab(orig.log);
+    console.error = grab(orig.error);
+    console.warn = grab(orig.warn);
+
+    const onErr = ev => { logs.push("window.onerror: " + (ev.message || ev)); };
+    window.addEventListener("error", onErr);
+
     const el = document.createElement("script");
     el.type = "text/python";
     el.id = "bry_run_" + (this._n++);
     el.textContent = BRY_BOOT;
-    document.body.appendChild(el);
-    try {
-      window.brython({ debug: 0 });
-    } finally {
-      el.remove();
-    }
 
-    if (!window.__PY_DONE) throw new Error("ההרצה לא הסתיימה");
-    return { code: window.__PY_CODE, out: window.__PY_OUT, engine: window.__PY_ENGINE || this.label };
+    const cleanup = () => {
+      console.log = orig.log; console.error = orig.error; console.warn = orig.warn;
+      window.removeEventListener("error", onErr);
+      el.remove();
+    };
+
+    return (async () => {
+      try {
+        document.body.appendChild(el);
+        try {
+          window.brython({ debug: 1 });
+        } catch (e) {
+          logs.push("brython(): " + (e && e.message ? e.message : String(e)));
+        }
+
+        // ההרצה עשויה להיות אסינכרונית — ממתינים לדגל הסיום
+        const deadline = Date.now() + 20000;
+        while (!window.__PY_DONE && Date.now() < deadline) {
+          await new Promise(r => setTimeout(r, 40));
+        }
+
+        if (!window.__PY_DONE) {
+          const tail = logs.filter(Boolean).slice(-25).join("\n");
+          const err = new Error("ההרצה לא הסתיימה");
+          err.detail = tail || "(המנוע לא החזיר שום הודעה)";
+          throw err;
+        }
+
+        return {
+          code: window.__PY_CODE,
+          out: window.__PY_OUT,
+          engine: window.__PY_ENGINE || this.label
+        };
+      } finally {
+        cleanup();
+      }
+    })();
   }
 };
 /* ============================================================
@@ -7360,15 +7403,15 @@ const Engine = {
     return ok2;
   },
 
-  runScript(src) {
+  async runScript(src) {
     return this.mode() === "light"
-      ? Bry.call({ kind: "script", src })
+      ? await Bry.call({ kind: "script", src })
       : Py.call("run_script", src);
   },
 
-  runLab(files) {
+  async runLab(files) {
     return this.mode() === "light"
-      ? Bry.call({ kind: "lab", files })
+      ? await Bry.call({ kind: "lab", files })
       : Py.call("run_lab", { files });
   }
 };
@@ -7510,7 +7553,7 @@ async function runLab(lessonId) {
     }
 
     if (lab.mode === "output") {
-      const res = Engine.runScript(code);
+      const res = await Engine.runScript(code);
       const actual = res.out;
       let html = "";
       if (res.code !== 0) {
@@ -7534,7 +7577,7 @@ async function runLab(lessonId) {
       ? Object.assign({}, { [lab.file]: code, "test_lab.py": lab.tests })
       : Object.assign({}, lab.support || {}, { [lab.file]: code });
 
-    const main = Engine.runLab(files);
+    const main = await Engine.runLab(files);
     let html = labOutBox(lessonId, main.out.trim() || "(אין פלט)");
     const passed = countPassed(main.out);
 
@@ -7548,7 +7591,7 @@ async function runLab(lessonId) {
     } else if (lab.mutant) {
       log("");
       const mutFiles = Object.assign({}, lab.mutant, { [lab.file]: code });
-      const mut = Engine.runLab(mutFiles);
+      const mut = await Engine.runLab(mutFiles);
       html = labOutBox(lessonId, main.out.trim());
       if (mut.code === 0) {
         html += verdict("warn", "הבדיקה עוברת — אבל גם על קוד שבור",
@@ -7565,7 +7608,7 @@ async function runLab(lessonId) {
     }
     target.innerHTML = html;
   } catch (e) {
-    target.innerHTML = labOutBox(lessonId, "שגיאה בהרצה: " + e.message);
+    target.innerHTML = labOutBox(lessonId, "שגיאה בהרצה: " + e.message + (e.detail ? "\n\n" + e.detail : ""));
   } finally {
     btn.disabled = false;
     btn.textContent = "▶ הרץ בדיקות";
@@ -7718,14 +7761,14 @@ async function runPlayground() {
           "ההרצה הראשונה לוקחת 20–40 שניות, אחריה מיידית וגם אופליין"
         ] : null));
     } else if (pgMode() === "pytest") {
-      const res = Engine.runLab({ "test_playground.py": code });
+      const res = await Engine.runLab({ "test_playground.py": code });
       out.innerHTML = labOutBox("pg", res.out.trim() || "(אין פלט)");
     } else {
-      const res = Engine.runScript(code);
+      const res = await Engine.runScript(code);
       out.innerHTML = labOutBox("pg", res.out.trim() || "(אין פלט)");
     }
   } catch (e) {
-    out.innerHTML = labOutBox("pg", "שגיאה: " + e.message);
+    out.innerHTML = labOutBox("pg", "שגיאה: " + e.message + (e.detail ? "\n\n" + e.detail : ""));
   } finally {
     btn.disabled = false;
     btn.textContent = label;
