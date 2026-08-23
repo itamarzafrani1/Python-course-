@@ -1,5 +1,5 @@
 /* service worker — שומר את האפליקציה במטמון כדי שתעבוד לגמרי אופליין */
-const CACHE = "python-track-v1";
+const CACHE = "python-track-v2";
 const ASSETS = [
   "./",
   "./index.html",
@@ -37,6 +37,18 @@ self.addEventListener("fetch", event => {
         caches.open(CACHE).then(c => c.put(req, copy)).catch(() => {});
         return res;
       }).catch(() => hit))
+    );
+    return;
+  }
+
+  // דף האפליקציה: רשת קודם, כדי שעדכונים ייקלטו מיד. אופליין — מהמטמון
+  if (req.mode === "navigate" || /\.html?($|\?)/.test(req.url)) {
+    event.respondWith(
+      fetch(req).then(res => {
+        const copy = res.clone();
+        caches.open(CACHE).then(c => c.put("./index.html", copy)).catch(() => {});
+        return res;
+      }).catch(() => caches.match("./index.html"))
     );
     return;
   }
