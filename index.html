@@ -5906,6 +5906,804 @@ def test_negative_raises():
 ` }
 ];
 /* ============================================================
+   BRYTHON ENGINE — פייתון ב-JavaScript, בלי WebAssembly.
+   ~2MB במקום ~25MB, ובלי הקצאת heap ענקית שמפילה מכשירים ניידים.
+   לעבודה אופליין מלאה: הורד brython.js ו-brython_stdlib.js
+   לתיקייה בשם "brython" ליד index.html.
+   ============================================================ */
+const BRYTHON_SOURCES = [
+  ["./brython/brython.js", "./brython/brython_stdlib.js"],
+  ["https://cdn.jsdelivr.net/npm/brython@3/brython.min.js",
+   "https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js"]
+];
+
+const BRY_BOOT = String.raw`
+"""
+מנוע קל: רץ תחת Brython (פייתון ב-JavaScript, בלי WebAssembly).
+אין מערכת קבצים אמיתית, ולכן יש כאן מערכת קבצים וירטואלית בזיכרון,
+ומריצים מודולים מתוך מחרוזות במקום לייבא מהדיסק.
+"""
+import sys, io, re, json, types, itertools, traceback
+
+try:
+    from browser import window          # Brython
+except ImportError:
+    window = None                       # מצב בדיקה ב-CPython
+
+ENGINE = "brython"
+ENGINE_LABEL = "mini-pytest · Brython (מנוע קל)"
+
+
+# ============================================================ virtual FS
+FS = {}
+DIRS = {"/", "/work", "/tmp"}
+
+
+def _norm(p):
+    s = str(p).replace("\\", "/")
+    if not s.startswith("/"):
+        s = "/work/" + s
+    while "//" in s:
+        s = s.replace("//", "/")
+    if len(s) > 1 and s.endswith("/"):
+        s = s[:-1]
+    return s
+
+
+class VFile:
+    def __init__(self, path, mode, buf):
+        self.path, self.mode = path, mode
+        self._buf = buf
+        self._pos = 0
+        self.closed = False
+
+    def read(self, n=-1):
+        data = self._buf[self._pos:]
+        self._pos = len(self._buf)
+        return data
+
+    def readlines(self):
+        return self.read().splitlines(True)
+
+    def readline(self):
+        rest = self._buf[self._pos:]
+        if not rest:
+            return ""
+        i = rest.find("\n")
+        line = rest if i < 0 else rest[:i + 1]
+        self._pos += len(line)
+        return line
+
+    def write(self, s):
+        self._buf += str(s)
+        return len(str(s))
+
+    def writelines(self, lines):
+        for line in lines:
+            self.write(line)
+
+    def flush(self):
+        if any(m in self.mode for m in ("w", "a", "x", "+")):
+            FS[self.path] = self._buf
+
+    def close(self):
+        self.flush()
+        self.closed = True
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        self.close()
+        return False
+
+    def __iter__(self):
+        for line in self.read().splitlines():
+            yield line + "\n"
+
+
+def vopen(path, mode="r", encoding=None, newline=None, errors=None, buffering=-1):
+    p = _norm(path)
+    if "r" in mode and "+" not in mode:
+        if p not in FS:
+            raise FileNotFoundError("No such file or directory: '%s'" % p)
+        return VFile(p, mode, FS[p])
+    if "a" in mode:
+        return VFile(p, mode, FS.get(p, ""))
+    DIRS.add(p.rsplit("/", 1)[0] or "/")
+    FS.setdefault(p, "")
+    return VFile(p, mode, "")
+
+
+class VPath:
+    def __init__(self, *parts):
+        joined = "/".join(str(x) for x in parts if str(x) != "")
+        self._p = _norm(joined) if joined else "/work"
+
+    # --- construction -------------------------------------------------
+    def __truediv__(self, other):
+        return VPath(self._p + "/" + str(other))
+
+    def __rtruediv__(self, other):
+        return VPath(str(other) + "/" + self._p)
+
+    def __str__(self):
+        return self._p
+
+    def __repr__(self):
+        return "PosixPath('%s')" % self._p
+
+    def __fspath__(self):
+        return self._p
+
+    def __eq__(self, other):
+        return str(other) == self._p
+
+    def __hash__(self):
+        return hash(self._p)
+
+    # --- parts --------------------------------------------------------
+    @property
+    def name(self):
+        return self._p.rsplit("/", 1)[-1]
+
+    @property
+    def stem(self):
+        n = self.name
+        return n.rsplit(".", 1)[0] if "." in n else n
+
+    @property
+    def suffix(self):
+        n = self.name
+        return "." + n.rsplit(".", 1)[1] if "." in n else ""
+
+    @property
+    def parent(self):
+        head = self._p.rsplit("/", 1)[0]
+        return VPath(head or "/")
+
+    # --- queries ------------------------------------------------------
+    def exists(self):
+        return self._p in FS or self._p in DIRS
+
+    def is_file(self):
+        return self._p in FS
+
+    def is_dir(self):
+        return self._p in DIRS
+
+    def stat(self):
+        return types.SimpleNamespace(st_size=len(FS.get(self._p, "")))
+
+    # --- mutation -----------------------------------------------------
+    def mkdir(self, parents=False, exist_ok=False):
+        if self._p in DIRS and not exist_ok:
+            raise FileExistsError(self._p)
+        parts = self._p.strip("/").split("/")
+        acc = ""
+        for part in parts:
+            acc += "/" + part
+            DIRS.add(acc)
+        return None
+
+    def write_text(self, data, encoding=None, errors=None, newline=None):
+        DIRS.add(self.parent._p)
+        FS[self._p] = str(data)
+        return len(str(data))
+
+    def read_text(self, encoding=None, errors=None):
+        if self._p not in FS:
+            raise FileNotFoundError("No such file or directory: '%s'" % self._p)
+        return FS[self._p]
+
+    def write_bytes(self, data):
+        return self.write_text(data.decode("utf-8") if hasattr(data, "decode") else str(data))
+
+    def read_bytes(self):
+        return self.read_text().encode("utf-8")
+
+    def unlink(self, missing_ok=False):
+        if self._p in FS:
+            del FS[self._p]
+        elif not missing_ok:
+            raise FileNotFoundError(self._p)
+
+    def open(self, mode="r", encoding=None, newline=None, **kw):
+        return vopen(self._p, mode, encoding, newline)
+
+    # --- listing ------------------------------------------------------
+    def _children(self, recursive):
+        prefix = self._p.rstrip("/") + "/"
+        for p in list(FS):
+            if not p.startswith(prefix):
+                continue
+            rest = p[len(prefix):]
+            if recursive or "/" not in rest:
+                yield VPath(p)
+
+    def iterdir(self):
+        return list(self._children(False))
+
+    def glob(self, pattern):
+        rx = re.compile("^" + re.escape(pattern).replace("\\*", "[^/]*") + "$")
+        return [p for p in self._children(False) if rx.match(p.name)]
+
+    def rglob(self, pattern):
+        rx = re.compile("^" + re.escape(pattern).replace("\\*", "[^/]*") + "$")
+        return [p for p in self._children(True) if rx.match(p.name)]
+
+
+# ============================================================ fake os / pathlib
+_os = types.ModuleType("os")
+_os.environ = {}
+_os.sep = "/"
+_os.linesep = "\n"
+_os.name = "posix"
+_os.getcwd = lambda: "/work"
+_os.chdir = lambda p: None
+_os.listdir = lambda p=".": [x.name for x in VPath(p).iterdir()]
+_os.remove = lambda p: VPath(p).unlink()
+
+
+def _makedirs(p, exist_ok=False, **k):
+    VPath(p).mkdir(parents=True, exist_ok=True)
+
+
+_os.makedirs = _makedirs
+_os.path = types.SimpleNamespace(
+    join=lambda *a: _norm("/".join(str(x) for x in a)),
+    exists=lambda p: VPath(p).exists(),
+    isfile=lambda p: VPath(p).is_file(),
+    isdir=lambda p: VPath(p).is_dir(),
+    basename=lambda p: VPath(p).name,
+    dirname=lambda p: str(VPath(p).parent),
+    splitext=lambda p: (str(p).rsplit(".", 1)[0], "." + str(p).rsplit(".", 1)[1]) if "." in str(p) else (str(p), ""),
+)
+
+_pathlib = types.ModuleType("pathlib")
+_pathlib.Path = VPath
+_pathlib.PurePath = VPath
+
+sys.modules["os"] = _os
+sys.modules["os.path"] = _os.path
+sys.modules["pathlib"] = _pathlib
+
+
+# ============================================================ mini pytest
+class _Approx:
+    def __init__(self, expected, rel=None, abs=None):
+        self.expected, self.rel, self.abs = expected, rel, abs
+
+    def _close(self, a, b):
+        if self.abs is not None and abs(a - b) <= self.abs:
+            return True
+        tol = self.rel if self.rel is not None else 1e-6
+        return abs(a - b) <= tol * max(abs(a), abs(b), 1e-12)
+
+    def __eq__(self, other):
+        e = self.expected
+        try:
+            if isinstance(e, dict):
+                return set(e) == set(other) and all(self._close(other[k], e[k]) for k in e)
+            if isinstance(e, (list, tuple)):
+                return len(e) == len(other) and all(self._close(x, y) for x, y in zip(other, e))
+            return self._close(other, e)
+        except Exception:
+            return False
+
+    def __repr__(self):
+        return "approx(%r)" % (self.expected,)
+
+
+def _approx(expected, rel=None, abs=None):
+    return _Approx(expected, rel, abs)
+
+
+class _Raises:
+    def __init__(self, expected, match=None):
+        self.expected, self.match = expected, match
+        self.value = None
+        self.type = None
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, et, ev, tb):
+        if et is None:
+            raise AssertionError("DID NOT RAISE " + repr(self.expected))
+        if not issubclass(et, self.expected):
+            return False
+        if self.match and not re.search(self.match, str(ev)):
+            raise AssertionError("regex %r does not match %r" % (self.match, str(ev)))
+        self.value, self.type = ev, et
+        return True
+
+
+class _Param:
+    def __init__(self, values, marks=None, id=None):
+        self.values, self.marks, self.id = values, marks, id
+
+
+def _param(*values, **k):
+    return _Param(values, k.get("marks"), k.get("id"))
+
+
+class _Mark:
+    def __init__(self, name):
+        self.name = name
+
+    def __call__(self, *a, **k):
+        if len(a) == 1 and not k and callable(a[0]) and not isinstance(a[0], (str, list, tuple)):
+            return self._apply(a[0], (), {})
+
+        def deco(fn):
+            return self._apply(fn, a, k)
+        return deco
+
+    def _apply(self, fn, a, k):
+        if self.name == "parametrize":
+            names = a[0]
+            if isinstance(names, str):
+                names = [n.strip() for n in names.split(",") if n.strip()]
+            fn._params = getattr(fn, "_params", []) + [(names, list(a[1]), k.get("ids"))]
+        elif self.name == "skip":
+            fn._skip = k.get("reason", "")
+        elif self.name == "skipif":
+            if (a[0] if a else k.get("condition", True)):
+                fn._skip = k.get("reason", "")
+        elif self.name == "xfail":
+            fn._xfail = k.get("reason", "")
+        else:
+            fn._marks = getattr(fn, "_marks", []) + [self.name]
+        return fn
+
+
+class _MarkGen:
+    def __getattr__(self, name):
+        return _Mark(name)
+
+
+class _Skipped(Exception):
+    pass
+
+
+def _skip(reason=""):
+    raise _Skipped(reason)
+
+
+def _fail(msg=""):
+    raise AssertionError(msg)
+
+
+def _fixture(*a, **k):
+    if len(a) == 1 and callable(a[0]):
+        a[0]._is_fixture = True
+        return a[0]
+
+    def deco(fn):
+        fn._is_fixture = True
+        fn._fx_params = k.get("params")
+        return fn
+    return deco
+
+
+def _importorskip(name, *a, **k):
+    try:
+        return __import__(name)
+    except ImportError:
+        raise _Skipped("could not import " + name)
+
+
+class MonkeyPatch:
+    def __init__(self):
+        self._undo = []
+
+    def setattr(self, target, name, value=None):
+        if isinstance(target, str):
+            modname, _, attr = target.rpartition(".")
+            target, name, value = sys.modules[modname], attr, name
+        had = hasattr(target, name)
+        old = getattr(target, name, None)
+        self._undo.append(lambda: setattr(target, name, old) if had else None)
+        setattr(target, name, value)
+
+    def delattr(self, target, name, raising=True):
+        if hasattr(target, name):
+            old = getattr(target, name)
+            self._undo.append(lambda: setattr(target, name, old))
+            delattr(target, name)
+        elif raising:
+            raise AttributeError(name)
+
+    def setenv(self, key, value):
+        had = key in _os.environ
+        old = _os.environ.get(key)
+        self._undo.append(lambda: _os.environ.__setitem__(key, old) if had else _os.environ.pop(key, None))
+        _os.environ[key] = str(value)
+
+    def delenv(self, key, raising=True):
+        if key in _os.environ:
+            old = _os.environ[key]
+            self._undo.append(lambda: _os.environ.__setitem__(key, old))
+            del _os.environ[key]
+        elif raising:
+            raise KeyError(key)
+
+    def setitem(self, d, key, value):
+        had, old = key in d, d.get(key)
+        self._undo.append(lambda: d.__setitem__(key, old) if had else d.pop(key, None))
+        d[key] = value
+
+    def chdir(self, path):
+        pass
+
+    def undo(self):
+        for fn in reversed(self._undo):
+            try:
+                fn()
+            except Exception:
+                pass
+        self._undo = []
+
+
+class _Captured:
+    def __init__(self, out, err):
+        self.out, self.err = out, err
+
+
+class _CapSys:
+    def __init__(self):
+        self._out = io.StringIO()
+        self._old = sys.stdout
+        sys.stdout = self._out
+
+    def readouterr(self):
+        o = self._out.getvalue()
+        self._out.truncate(0)
+        self._out.seek(0)
+        return _Captured(o, "")
+
+    def _release(self):
+        sys.stdout = self._old
+
+
+def _install_pytest():
+    m = types.ModuleType("pytest")
+    m.raises = _Raises
+    m.warns = _Raises
+    m.approx = _approx
+    m.fixture = _fixture
+    m.mark = _MarkGen()
+    m.param = _param
+    m.skip = _skip
+    m.fail = _fail
+    m.importorskip = _importorskip
+    m.MonkeyPatch = MonkeyPatch
+    m.__version__ = "mini"
+    sys.modules["pytest"] = m
+    return m
+
+
+_install_pytest()
+
+
+# ============================================================ runner
+def _argnames(fn):
+    names = []
+    try:
+        code = fn.__code__
+        names = list(code.co_varnames[:code.co_argcount])
+    except Exception:
+        try:
+            import inspect
+            names = list(inspect.signature(fn).parameters)
+        except Exception:
+            names = []
+    return [n for n in names if n not in ("self", "cls")]
+
+
+def _collect(mod):
+    items = []
+    for name, obj in list(vars(mod).items()):
+        if name.startswith("test_") and callable(obj) and not isinstance(obj, type):
+            items.append((name, obj, None))
+        elif name.startswith("Test") and isinstance(obj, type):
+            for mn in dir(obj):
+                if mn.startswith("test_"):
+                    items.append((name + "::" + mn, getattr(obj, mn), obj))
+    return items
+
+
+def _cases(fn):
+    stacks = list(reversed(getattr(fn, "_params", [])))
+    if not stacks:
+        return [({}, "")]
+    grids = []
+    for names, values, ids in stacks:
+        row = []
+        for i, v in enumerate(values):
+            if isinstance(v, _Param):
+                v = v.values[0] if len(v.values) == 1 else v.values
+            vals = v if isinstance(v, (list, tuple)) and len(names) > 1 else (v,)
+            label = ids[i] if ids and i < len(ids) else "-".join(str(x) for x in vals)
+            row.append((dict(zip(names, vals)), label))
+        grids.append(row)
+    out = []
+    for combo in itertools.product(*grids):
+        kw, labels = {}, []
+        for d, lbl in combo:
+            kw.update(d)
+            labels.append(lbl)
+        out.append((kw, "[" + "-".join(labels) + "]"))
+    return out
+
+
+_TMP = {"n": 0}
+
+
+def _resolve(name, mod, fins, cache):
+    if name in cache:
+        return cache[name]
+    if name == "tmp_path":
+        _TMP["n"] += 1
+        p = VPath("/tmp/t%d" % _TMP["n"])
+        p.mkdir(parents=True, exist_ok=True)
+        val = p
+    elif name == "tmp_path_factory":
+        class _F:
+            def mktemp(self, n):
+                p = VPath("/tmp/" + str(n))
+                p.mkdir(parents=True, exist_ok=True)
+                return p
+        val = _F()
+    elif name == "monkeypatch":
+        mp = MonkeyPatch()
+        fins.append(mp.undo)
+        val = mp
+    elif name == "capsys":
+        cs = _CapSys()
+        fins.append(cs._release)
+        val = cs
+    else:
+        fx = getattr(mod, name, None)
+        if fx is None or not getattr(fx, "_is_fixture", False):
+            raise LookupError("fixture '" + name + "' not found")
+        kw = {a: _resolve(a, mod, fins, cache) for a in _argnames(fx)}
+        r = fx(**kw)
+        if hasattr(r, "__next__"):
+            gen = r
+            val = next(gen)
+
+            def _fin(g=gen):
+                try:
+                    next(g)
+                except StopIteration:
+                    pass
+            fins.append(_fin)
+        else:
+            val = r
+    cache[name] = val
+    return val
+
+
+def _make_module(name, src, is_main=False):
+    mod = types.ModuleType(name)
+    mod.__dict__["__name__"] = "__main__" if is_main else name
+    mod.__dict__["__file__"] = name + ".py"
+    mod.__dict__["open"] = vopen
+    mod.__dict__["Path"] = VPath
+    sys.modules[name] = mod
+    exec(compile(src, name + ".py", "exec"), mod.__dict__)
+    return mod
+
+
+def run_lab(payload):
+    files = payload["files"]
+    W = 70
+    buf = io.StringIO()
+    old = sys.stdout
+    sys.stdout = buf
+    passed = failed = skipped = xfailed = 0
+    failures = []
+    code = 0
+    try:
+        print("=" * 25 + " test session starts " + "=" * 24)
+        print("platform brython -- mini-pytest (מנוע קל)")
+
+        support = [f for f in files if not f.startswith("test_")]
+        tests = [f for f in files if f.startswith("test_")]
+
+        for fname in support:
+            _make_module(fname[:-3], files[fname])
+
+        mods = []
+        for fname in tests:
+            mods.append((fname, _make_module(fname[:-3], files[fname])))
+
+        items = []
+        for fname, mod in mods:
+            for name, fn, cls in _collect(mod):
+                for kw, label in _cases(fn):
+                    items.append((fname, mod, name + label, fn, cls, kw))
+
+        print("collected " + str(len(items)) + " items\n")
+
+        current = None
+        for fname, mod, nodeid, fn, cls, kw in items:
+            if current != fname:
+                if current is not None:
+                    print("")
+                print(fname + " ", end="")
+                current = fname
+            fins, cache = [], {}
+            try:
+                if getattr(fn, "_skip", None) is not None:
+                    skipped += 1
+                    print("s", end="")
+                    continue
+                args = {}
+                for a in _argnames(fn):
+                    args[a] = kw[a] if a in kw else _resolve(a, mod, fins, cache)
+                target = fn if cls is None else getattr(cls(), fn.__name__)
+                target(**args)
+                if getattr(fn, "_xfail", None) is not None:
+                    print("X", end="")
+                else:
+                    passed += 1
+                    print(".", end="")
+            except _Skipped:
+                skipped += 1
+                print("s", end="")
+            except Exception as exc:
+                if getattr(fn, "_xfail", None) is not None:
+                    xfailed += 1
+                    print("x", end="")
+                else:
+                    failed += 1
+                    print("F", end="")
+                    failures.append((nodeid, type(exc).__name__, str(exc), traceback.format_exc()))
+            finally:
+                for f in reversed(fins):
+                    try:
+                        f()
+                    except Exception:
+                        pass
+        print("")
+
+        if failures:
+            print("\n" + "=" * 29 + " FAILURES " + "=" * 30)
+            for nodeid, etype, emsg, tb in failures:
+                pad = max(2, (W - len(nodeid) - 2) // 2)
+                print("_" * pad + " " + nodeid + " " + "_" * pad)
+                body = [l for l in tb.splitlines() if "run_lab" not in l and "_resolve" not in l]
+                for line in body[2:]:
+                    print(line)
+                print("E   " + etype + ": " + emsg)
+                print("")
+
+        parts = []
+        if failed:
+            parts.append(str(failed) + " failed")
+        if passed:
+            parts.append(str(passed) + " passed")
+        if skipped:
+            parts.append(str(skipped) + " skipped")
+        if xfailed:
+            parts.append(str(xfailed) + " xfailed")
+        summary = ", ".join(parts) or "no tests ran"
+        bar = "=" * max(3, (W - len(summary) - 2) // 2)
+        print(bar + " " + summary + " " + bar)
+        code = 1 if failed else 0
+    except Exception:
+        traceback.print_exc(file=buf)
+        code = 3
+    finally:
+        sys.stdout = old
+        for f in list(files):
+            sys.modules.pop(f[:-3], None)
+    return {"code": code, "out": buf.getvalue(), "engine": ENGINE_LABEL}
+
+
+def run_script(src):
+    buf = io.StringIO()
+    old = sys.stdout
+    sys.stdout = buf
+    code = 0
+    try:
+        g = {"__name__": "__main__", "__file__": "playground.py",
+             "open": vopen, "Path": VPath}
+        exec(compile(src, "playground.py", "exec"), g)
+    except SystemExit:
+        pass
+    except BaseException:
+        code = 1
+        tb = traceback.format_exc()
+        lines = [l for l in tb.splitlines() if "run_script" not in l]
+        print("\n".join(lines[1:]), file=buf)
+    finally:
+        sys.stdout = old
+    return {"code": code, "out": buf.getvalue(), "engine": ENGINE_LABEL}
+
+
+# ============================================================ dispatch
+def _dispatch(raw):
+    payload = json.loads(raw)
+    if payload.get("kind") == "script":
+        return run_script(payload["src"])
+    return run_lab(payload)
+
+
+if window is not None:
+    try:
+        _res = _dispatch(window.__PY_SRC)
+        window.__PY_OUT = _res["out"]
+        window.__PY_CODE = _res["code"]
+        window.__PY_ENGINE = ENGINE_LABEL
+    except BaseException:
+        window.__PY_OUT = traceback.format_exc()
+        window.__PY_CODE = 3
+    window.__PY_DONE = True
+`;
+
+const Bry = {
+  status: "idle",          // idle | loading | ready | failed
+  label: "",
+  reason: "",
+  _promise: null,
+  _n: 0,
+
+  ensure(log) {
+    if (this.status === "ready") return Promise.resolve(true);
+    if (this.status === "failed" && !this.retryable) return Promise.resolve(false);
+    if (this.status === "failed") { this.status = "idle"; this._promise = null; this.retryable = false; }
+    if (this._promise) return this._promise;
+
+    this._promise = (async () => {
+      this.status = "loading";
+      for (const [core, stdlib] of BRYTHON_SOURCES) {
+        try {
+          log("טוען מנוע פייתון קל: " + core);
+          await Py.loadScript(core);
+          await Py.loadScript(stdlib);
+          if (typeof window.brython === "function") {
+            this.label = "mini-pytest · Brython (מנוע קל)";
+            this.status = "ready";
+            log("מוכן: " + this.label);
+            return true;
+          }
+        } catch (e) { /* ננסה את המקור הבא */ }
+      }
+      this.status = "failed";
+      this.retryable = true;
+      this.reason = "לא הצלחנו לטעון את מנוע הפייתון הקל — כנראה אין חיבור לרשת.";
+      log(this.reason);
+      return false;
+    })();
+    return this._promise;
+  },
+
+  call(payload) {
+    window.__PY_SRC = JSON.stringify(payload);
+    window.__PY_DONE = false;
+    window.__PY_OUT = "";
+    window.__PY_CODE = 3;
+
+    const el = document.createElement("script");
+    el.type = "text/python";
+    el.id = "bry_run_" + (this._n++);
+    el.textContent = BRY_BOOT;
+    document.body.appendChild(el);
+    try {
+      window.brython({ debug: 0 });
+    } finally {
+      el.remove();
+    }
+
+    if (!window.__PY_DONE) throw new Error("ההרצה לא הסתיימה");
+    return { code: window.__PY_CODE, out: window.__PY_OUT, engine: window.__PY_ENGINE || this.label };
+  }
+};
+/* ============================================================
    flatten
    ============================================================ */
 const FLAT = [];
@@ -6528,11 +7326,61 @@ const Py = {
   }
 };
 
-const engineBadge = () =>
-  Py.status === "ready" ? Py.label
-  : Py.status === "loading" ? "טוען מנוע…"
-  : Py.status === "failed" ? "בודק מבני (ללא הרצה)"
-  : "המנוע ייטען בהרצה הראשונה";
+
+/* ============================================================
+   ENGINE — בוחר בין המנוע הקל (Brython) למלא (Pyodide)
+   ברירת המחדל היא הקל: הוא עולה בכל מכשיר.
+   ============================================================ */
+const Engine = {
+  reason: "",
+  hints: null,
+
+  mode() { return state.engine === "full" ? "full" : "light"; },
+  active() { return this.mode() === "light" ? Bry : Py; },
+  status() { return this.active().status; },
+  label() { return this.active().label; },
+
+  async ensure(log) {
+    this.reason = ""; this.hints = null;
+
+    if (this.mode() === "light") {
+      const ok = await Bry.ensure(log);
+      if (!ok) this.reason = Bry.reason;
+      return ok;
+    }
+
+    const ok = await Py.ensure(log);
+    if (ok) return true;
+
+    log("");
+    log("המנוע המלא לא זמין — עוברים אוטומטית למנוע הקל.");
+    state.engine = "light"; save();
+    const ok2 = await Bry.ensure(log);
+    if (!ok2) { this.reason = Py.reason || Bry.reason; this.hints = Py.hints; }
+    return ok2;
+  },
+
+  runScript(src) {
+    return this.mode() === "light"
+      ? Bry.call({ kind: "script", src })
+      : Py.call("run_script", src);
+  },
+
+  runLab(files) {
+    return this.mode() === "light"
+      ? Bry.call({ kind: "lab", files })
+      : Py.call("run_lab", { files });
+  }
+};
+
+const engineBadge = () => {
+  const st = Engine.status();
+  if (st === "ready") return Engine.label();
+  if (st === "loading") return "טוען מנוע…";
+  if (st === "failed") return "בודק מבני (ללא הרצה)";
+  return Engine.mode() === "light" ? "מנוע קל · ייטען בהרצה הראשונה"
+                                   : "מנוע מלא · ייטען בהרצה הראשונה";
+};
 
 /* ============================================================
    lab panel
@@ -6652,7 +7500,7 @@ async function runLab(lessonId) {
     return;
   }
 
-  const ready = await Py.ensure(log);
+  const ready = await Engine.ensure(log);
   if (badge) badge.textContent = engineBadge();
 
   try {
@@ -6662,7 +7510,7 @@ async function runLab(lessonId) {
     }
 
     if (lab.mode === "output") {
-      const res = Py.call("run_script", code);
+      const res = Engine.runScript(code);
       const actual = res.out;
       let html = "";
       if (res.code !== 0) {
@@ -6686,7 +7534,7 @@ async function runLab(lessonId) {
       ? Object.assign({}, { [lab.file]: code, "test_lab.py": lab.tests })
       : Object.assign({}, lab.support || {}, { [lab.file]: code });
 
-    const main = Py.call("run_lab", { files });
+    const main = Engine.runLab(files);
     let html = labOutBox(lessonId, main.out.trim() || "(אין פלט)");
     const passed = countPassed(main.out);
 
@@ -6700,7 +7548,7 @@ async function runLab(lessonId) {
     } else if (lab.mutant) {
       log("");
       const mutFiles = Object.assign({}, lab.mutant, { [lab.file]: code });
-      const mut = Py.call("run_lab", { files: mutFiles });
+      const mut = Engine.runLab(mutFiles);
       html = labOutBox(lessonId, main.out.trim());
       if (mut.code === 0) {
         html += verdict("warn", "הבדיקה עוברת — אבל גם על קוד שבור",
@@ -6754,7 +7602,7 @@ function fallbackCheck(lessonId, code, target) {
     failed.length
       ? verdict("bad", "הקוד לא עומד בדרישות", "", failed.map(f => f[1]))
       : verdict("ok", "עומד בכל הדרישות המבניות",
-          "שים לב: זו בדיקה של מבנה הקוד בלבד, לא הרצה. " + (Py.reason || ""), Py.hints)
+          "שים לב: זו בדיקה של מבנה הקוד בלבד, לא הרצה. " + (Engine.reason || ""), Engine.hints)
   );
   if (!failed.length) markDone(lessonId, true);
 }
@@ -6777,6 +7625,7 @@ function buildPlayground() {
     <div class="pg-bar">
       <span class="pg-title">מגרש משחקים</span>
       <span class="lab-engine" id="pgEngine">${esc(engineBadge())}</span>
+      <button class="chip" id="pgEngineToggle">החלף מנוע</button>
       <button class="icon-btn" id="pgClose" aria-label="סגירה">✕</button>
     </div>
     <div class="pg-body">
@@ -6809,6 +7658,14 @@ function buildPlayground() {
 
 function pgMode() { return state.pgMode || "script"; }
 
+function refreshEngineUi() {
+  const badge = document.getElementById("pgEngine");
+  if (badge) badge.textContent = engineBadge();
+  const t = document.getElementById("pgEngineToggle");
+  if (t) t.textContent = Engine.mode() === "light" ? "עבור למנוע מלא" : "עבור למנוע קל";
+  document.querySelectorAll("[data-engine]").forEach(el => { el.textContent = engineBadge(); });
+}
+
 function setPgMode(mode) {
   state.pgMode = mode;
   save();
@@ -6825,7 +7682,7 @@ function openPlayground() {
   setPgMode(pgMode());
   document.getElementById("pg").classList.add("on");
   document.getElementById("pgScrim").classList.add("on");
-  document.getElementById("pgEngine").textContent = engineBadge();
+  refreshEngineUi();
 }
 
 function closePlayground() {
@@ -6849,22 +7706,22 @@ async function runPlayground() {
   const lines = [];
   const log = m => { lines.push(m); out.innerHTML = labOutBox("pg", lines.join("\n")); };
 
-  const ready = await Py.ensure(log);
-  badge.textContent = engineBadge();
+  const ready = await Engine.ensure(log);
+  refreshEngineUi();
 
   try {
     if (!ready) {
       out.innerHTML = verdict("warn", "אי אפשר להריץ קוד כאן",
-        Py.reason || "מגרש המשחקים מריץ פייתון אמיתי, ולכן הוא דורש את Pyodide.",
-        Py.hints || (inSandbox ? [
+        Engine.reason || "מגרש המשחקים מריץ פייתון אמיתי, ולכן הוא דורש את Pyodide.",
+        Engine.hints || (inSandbox ? [
           "פתח את הקובץ בדפדפן רגיל, או מהכתובת שאליה העלית אותו",
           "ההרצה הראשונה לוקחת 20–40 שניות, אחריה מיידית וגם אופליין"
         ] : null));
     } else if (pgMode() === "pytest") {
-      const res = Py.call("run_lab", { files: { "test_playground.py": code } });
+      const res = Engine.runLab({ "test_playground.py": code });
       out.innerHTML = labOutBox("pg", res.out.trim() || "(אין פלט)");
     } else {
-      const res = Py.call("run_script", code);
+      const res = Engine.runScript(code);
       out.innerHTML = labOutBox("pg", res.out.trim() || "(אין פלט)");
     }
   } catch (e) {
@@ -6887,6 +7744,17 @@ document.addEventListener("click", e => {
   if (e.target.closest("#pgOpen")) { openPlayground(); return; }
   if (e.target.closest("#pgClose") || e.target.id === "pgScrim") { closePlayground(); return; }
   if (e.target.closest("#pgRun")) { runPlayground(); return; }
+  if (e.target.closest("#pgEngineToggle")) {
+    state.engine = Engine.mode() === "light" ? "full" : "light";
+    save();
+    refreshEngineUi();
+    const out = document.getElementById("pgOut");
+    out.innerHTML = verdict("ok", Engine.mode() === "light" ? "עברת למנוע הקל" : "עברת למנוע המלא",
+      Engine.mode() === "light"
+        ? "Brython — פייתון ב-JavaScript. עולה בכל מכשיר, כולל ניידים. pytest דרך המנוע המוקטן."
+        : "Pyodide — CPython אמיתי עם pytest מלא וספריות C. כבד: דורש הורדה של ~25MB והרבה זיכרון.");
+    return;
+  }
   if (e.target.closest("#pgClear")) { document.getElementById("pgOut").innerHTML = ""; return; }
 
   const tab = e.target.closest("[data-pgmode]");
