@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>מסלול פייתון — מהיסודות לבקאנד ולבדיקות</title>
 <meta name="description" content="קורס פייתון מקצה לקצה: יסודות, OOP, pytest, FastAPI ובקאנד — עובד אופליין.">
 <meta name="theme-color" content="#151322">
@@ -66,7 +66,7 @@ html[data-theme="light"]{
 }
 
 *{box-sizing:border-box}
-html,body{margin:0;padding:0}
+html,body{margin:0;padding:0;min-height:100%;width:100%}
 body{
   background:var(--bg);
   color:var(--ink);
@@ -75,8 +75,12 @@ body{
   line-height:1.75;
   -webkit-text-size-adjust:100%;
   overflow-wrap:anywhere;
+  min-height:100vh;min-height:100dvh;
+  -webkit-tap-highlight-color:transparent;
 }
-button{font-family:inherit;cursor:pointer}
+body.pg-open{overflow:hidden;touch-action:none}
+button{font-family:inherit;cursor:pointer;touch-action:manipulation}
+input,textarea,button{font-size:16px}
 a{color:var(--accent)}
 ::selection{background:var(--accent);color:#fff}
 :focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:4px}
@@ -314,7 +318,7 @@ td code.inline{white-space:nowrap}
 .scrim.on{display:block}
 
 @media (max-width:900px){
-  :root{--sidebar-w:290px}
+  :root{--sidebar-w:min(88vw,320px)}
   .sidebar{
     position:fixed;inset-block:0;inset-inline-end:0;z-index:50;
     transform:translateX(100%);transition:transform .25s ease;box-shadow:var(--shadow);
@@ -328,7 +332,18 @@ td code.inline{white-space:nowrap}
     padding-inline-end:calc(16px + env(safe-area-inset-right))}
   .lesson-nav{padding:20px 16px 60px;flex-wrap:wrap}
   .nav-btn{flex:1 1 46%}
-  pre{font-size:12.4px}
+  pre{font-size:12.4px;-webkit-overflow-scrolling:touch}
+  .icon-btn{width:44px;height:44px;min-width:44px}
+  .search{font-size:16px}
+}
+@media (max-width:520px){
+  .session-head{display:none}
+  .topbar{gap:8px}
+  .lesson-nav{display:grid;grid-template-columns:1fr;padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+  .nav-btn{width:100%}
+  h1.title{font-size:27px}
+  .lede{font-size:16px}
+  table{min-width:520px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none !important;transition:none !important}
@@ -5913,8 +5928,8 @@ def test_negative_raises():
    ============================================================ */
 const BRYTHON_SOURCES = [
   ["./brython/brython.js", "./brython/brython_stdlib.js"],
-  ["https://cdn.jsdelivr.net/npm/brython@3/brython.min.js",
-   "https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js"]
+  ["https://cdn.jsdelivr.net/npm/brython@3.14.3/brython.min.js",
+   "https://cdn.jsdelivr.net/npm/brython@3.14.3/brython_stdlib.js"]
 ];
 
 const BRY_BOOT = String.raw`
@@ -6955,7 +6970,7 @@ function renderLesson() {
       <span class="nav-l">${next ? esc(next.title) : "סיימת את המסלול"}</span>
     </button>`;
 
-  window.scrollTo({ top: 0, behavior: "instant" });
+  window.scrollTo({ top: 0, behavior: "auto" });
   renderTree();
   renderDots();
 }
@@ -7119,11 +7134,15 @@ document.addEventListener("click", e => {
 $("search").addEventListener("input", renderTree);
 
 document.addEventListener("keydown", e => {
-  if (e.target.tagName === "INPUT") {
-    if (e.key === "Escape") { e.target.value = ""; renderTree(); e.target.blur(); }
+  const target = e.target;
+  const tag = target && target.tagName;
+  const typing = tag === "INPUT" || tag === "TEXTAREA" || (target && target.isContentEditable);
+  if (typing) {
+    if (tag === "INPUT" && e.key === "Escape") { target.value = ""; renderTree(); target.blur(); }
     return;
   }
   const L = FLAT.find(l => l.id === state.current);
+  if (!L) return;
   if (e.key === "ArrowLeft" && FLAT[L.n + 1]) go(FLAT[L.n + 1].id);
   if (e.key === "ArrowRight" && FLAT[L.n - 1]) go(FLAT[L.n - 1].id);
   if (e.key === "/") { e.preventDefault(); $("search").focus(); }
@@ -7188,12 +7207,13 @@ document.addEventListener("keydown", e => {
 .pg-scrim{position:fixed;inset:0;background:rgba(8,6,16,.65);z-index:60;display:none}
 .pg-scrim.on{display:block}
 .pg{position:fixed;z-index:61;inset-block:0;inset-inline-start:0;width:min(700px,100%);
+  height:100vh;height:100dvh;max-height:100dvh;
   background:var(--bg-2);border-inline-end:1px solid var(--line);box-shadow:var(--shadow);
-  display:none;flex-direction:column}
+  display:none;flex-direction:column;overscroll-behavior:contain}
 .pg.on{display:flex}
-.pg-bar{display:flex;align-items:center;gap:10px;padding:13px 18px;padding-top:calc(13px + env(safe-area-inset-top));border-bottom:1px solid var(--line)}
-.pg-title{font-weight:750;font-size:16px}
-.pg-body{flex:1;overflow-y:auto;padding:14px 18px calc(40px + env(safe-area-inset-bottom))}
+.pg-bar{display:flex;align-items:center;gap:10px;padding:13px 18px;padding-top:calc(13px + env(safe-area-inset-top));border-bottom:1px solid var(--line);flex:0 0 auto}
+.pg-title{font-weight:750;font-size:16px;white-space:nowrap}
+.pg-body{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 18px calc(20px + env(safe-area-inset-bottom))}
 .tabs{display:flex;gap:6px;margin-bottom:10px}
 .tab{background:var(--surface);border:1px solid var(--line);color:var(--ink-2);
   padding:6px 14px;border-radius:var(--r-sm);font-size:13px;font-weight:650}
@@ -7205,8 +7225,32 @@ document.addEventListener("keydown", e => {
 .pg-code{width:100%;background:var(--code-bg);color:#DCD8F0;border:1px solid var(--line);
   border-radius:var(--r-md);padding:13px 14px;direction:ltr;text-align:left;
   font-family:var(--mono);font-size:13px;line-height:1.65;resize:vertical;
-  tab-size:4;white-space:pre;overflow-wrap:normal;overflow-x:auto;min-height:250px}
+  tab-size:4;white-space:pre;overflow-wrap:normal;overflow-x:auto;min-height:250px;caret-color:#fff}
+.pg .lab-actions{position:sticky;bottom:0;z-index:4;margin-inline:-2px;padding:10px 2px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg-2) 94%,transparent);backdrop-filter:blur(8px)}
 @media (max-width:900px){ .pg{width:100%} }
+@media (max-width:600px){
+  .pg-bar{padding:8px 10px;padding-top:calc(8px + env(safe-area-inset-top));gap:6px;flex-wrap:wrap}
+  .pg-title{font-size:15px}
+  .pg-bar .chip{min-height:40px;padding:6px 10px}
+  #pgEngine{order:4;flex:1 0 100%;margin-inline-start:0;font-size:10px}
+  #pgClose{margin-inline-start:auto}
+  .pg-body{padding:10px 12px calc(12px + env(safe-area-inset-bottom))}
+  .tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .tab,.chip,.run-btn,.reveal{min-height:44px}
+  .tab{padding:8px 10px}
+  .chips{gap:8px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;padding:7px 12px}
+  .pg-code{font-size:16px;line-height:1.55;min-height:38dvh;height:44dvh;max-height:58dvh;resize:none}
+  .lab-code{font-size:16px;min-height:220px}
+  .lab-actions{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:stretch}
+  .run-btn{padding:10px 14px}
+  .lab-out{font-size:12px;max-height:38dvh}
+}
+@media (max-height:600px) and (orientation:landscape){
+  .pg-code{min-height:30dvh;height:34dvh;max-height:42dvh}
+  #pgEngine{display:none}
+}
 
 `;
   const el = document.createElement("style");
@@ -7725,12 +7769,17 @@ function openPlayground() {
   setPgMode(pgMode());
   document.getElementById("pg").classList.add("on");
   document.getElementById("pgScrim").classList.add("on");
+  document.body.classList.add("pg-open");
   refreshEngineUi();
+  if (matchMedia("(pointer:fine)").matches) setTimeout(() => ta.focus(), 0);
 }
 
 function closePlayground() {
+  const ta = document.getElementById("pgCode");
+  if (ta) ta.blur();
   document.getElementById("pg").classList.remove("on");
   document.getElementById("pgScrim").classList.remove("on");
+  document.body.classList.remove("pg-open");
 }
 
 async function runPlayground() {
@@ -7779,6 +7828,9 @@ async function runPlayground() {
    wiring
    ============================================================ */
 buildPlayground();
+if (new URLSearchParams(location.search).get("playground") === "1") {
+  setTimeout(openPlayground, 0);
+}
 
 document.addEventListener("click", e => {
   const run = e.target.closest("[data-run]");

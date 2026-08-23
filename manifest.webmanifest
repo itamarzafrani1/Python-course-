@@ -1,11 +1,13 @@
 {
+  "id": "./",
   "name": "מסלול פייתון — מהיסודות לבקאנד ולבדיקות",
   "short_name": "פייתון",
-  "description": "קורס פייתון מקצה לקצה: יסודות, OOP, pytest, FastAPI ובקאנד. עובד אופליין.",
-  "start_url": "./index.html",
+  "description": "קורס פייתון מקצה לקצה: יסודות, OOP, pytest, FastAPI ובקאנד, עם מגרש משחקים להרצת קוד.",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
   "dir": "rtl",
   "lang": "he",
   "background_color": "#151322",
@@ -14,5 +16,13 @@
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "מגרש משחקים",
+      "short_name": "קוד חופשי",
+      "url": "./?playground=1",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
   ]
 }
