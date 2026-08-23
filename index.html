@@ -6435,7 +6435,8 @@ const Py = {
 
   ensure(log) {
     if (this.status === "ready") return Promise.resolve(true);
-    if (this.status === "failed") return Promise.resolve(false);
+    if (this.status === "failed" && !this.retryable) return Promise.resolve(false);
+    if (this.status === "failed") { this.status = "idle"; this._promise = null; this.retryable = false; }
     if (this._promise) return this._promise;
 
     this._promise = (async () => {
@@ -6470,12 +6471,21 @@ const Py = {
         log(this.reason + " עוברים לבודק המבני.");
         return false;
       }
+      const boot = () => Promise.race([
+        window.loadPyodide({ indexURL: base }),
+        new Promise((_, rej) => setTimeout(() => rej(new Error("אתחול Python לא הסתיים בתוך 90 שניות")), 90000))
+      ]);
+
       try {
         log("מאתחל Python… (הורדה חד-פעמית, מספר עשרות MB)");
-        this.pyodide = await Promise.race([
-          window.loadPyodide({ indexURL: base }),
-          new Promise((_, rej) => setTimeout(() => rej(new Error("אתחול Python לא הסתיים בתוך 60 שניות")), 60000))
-        ]);
+        try {
+          this.pyodide = await boot();
+        } catch (first) {
+          // ניסיון שני: הורדה שנקטעה או לחץ זיכרון רגעי הם התקלה הנפוצה
+          log("הניסיון הראשון נכשל (" + first.message + "). מנסה שוב…");
+          await new Promise(r => setTimeout(r, 1500));
+          this.pyodide = await boot();
+        }
         try {
           log("מתקין pytest…");
           await this.pyodide.loadPackage("micropip");
@@ -6491,7 +6501,17 @@ const Py = {
         return true;
       } catch (e) {
         this.status = "failed";
-        this.reason = "אתחול Python נכשל: " + e.message;
+        const oom = /exit\(1\)|terminated|memory|Aborted|RangeError/i.test(e.message || "");
+        this.reason = oom
+          ? "מנוע הפייתון לא הצליח לעלות — כמעט תמיד בגלל מחסור זיכרון או הורדה שנקטעה."
+          : "אתחול Python נכשל: " + e.message;
+        this.retryable = true;
+        this.hints = oom ? [
+          "התחבר ל-Wi-Fi — ההורדה היא כ-25MB ורשת סלולרית נוטה לקטוע אותה",
+          "סגור לשוניות ואפליקציות אחרות ברקע כדי לפנות זיכרון",
+          "נסה לפתוח את האתר בלשונית Safari רגילה במקום מהאייקון במסך הבית",
+          "אם זה נמשך — הפעל מחדש את המכשיר ונסה שוב"
+        ] : null;
         log(this.reason);
         return false;
       }
@@ -6734,7 +6754,7 @@ function fallbackCheck(lessonId, code, target) {
     failed.length
       ? verdict("bad", "הקוד לא עומד בדרישות", "", failed.map(f => f[1]))
       : verdict("ok", "עומד בכל הדרישות המבניות",
-          "שים לב: זו בדיקה של מבנה הקוד בלבד, לא הרצה. " + (Py.reason || ""))
+          "שים לב: זו בדיקה של מבנה הקוד בלבד, לא הרצה. " + (Py.reason || ""), Py.hints)
   );
   if (!failed.length) markDone(lessonId, true);
 }
@@ -6836,10 +6856,10 @@ async function runPlayground() {
     if (!ready) {
       out.innerHTML = verdict("warn", "אי אפשר להריץ קוד כאן",
         Py.reason || "מגרש המשחקים מריץ פייתון אמיתי, ולכן הוא דורש את Pyodide.",
-        inSandbox ? [
+        Py.hints || (inSandbox ? [
           "פתח את הקובץ בדפדפן רגיל, או מהכתובת שאליה העלית אותו",
           "ההרצה הראשונה לוקחת 20–40 שניות, אחריה מיידית וגם אופליין"
-        ] : null);
+        ] : null));
     } else if (pgMode() === "pytest") {
       const res = Py.call("run_lab", { files: { "test_playground.py": code } });
       out.innerHTML = labOutBox("pg", res.out.trim() || "(אין פלט)");

@@ -1,5 +1,7 @@
-/* service worker — שומר את האפליקציה במטמון כדי שתעבוד לגמרי אופליין */
-const CACHE = "python-track-v2";
+/* service worker — שומר את האפליקציה עצמה במטמון לעבודה אופליין.
+   קבצים חיצוניים (Pyodide) נשלחים ישירות לרשת: שכפול זרם של קובץ WASM
+   בגודל עשרות MB מכפיל את צריכת הזיכרון ומפיל את האתחול במכשירים ניידים. */
+const CACHE = "python-track-v3";
 const ASSETS = [
   "./",
   "./index.html",
@@ -29,20 +31,14 @@ self.addEventListener("fetch", event => {
   const req = event.request;
   if (req.method !== "GET") return;
 
-  // Pyodide וקבצי WASM: רשת קודם, ואז שמירה במטמון לשימוש אופליין
-  if (/pyodide|\.wasm$|\.whl$|\.zip$/.test(req.url)) {
-    event.respondWith(
-      caches.match(req).then(hit => hit || fetch(req).then(res => {
-        const copy = res.clone();
-        caches.open(CACHE).then(c => c.put(req, copy)).catch(() => {});
-        return res;
-      }).catch(() => hit))
-    );
-    return;
-  }
+  let url;
+  try { url = new URL(req.url); } catch (e) { return; }
 
-  // דף האפליקציה: רשת קודם, כדי שעדכונים ייקלטו מיד. אופליין — מהמטמון
-  if (req.mode === "navigate" || /\.html?($|\?)/.test(req.url)) {
+  // הכול מחוץ לדומיין שלנו — לא נוגעים. הדפדפן ינהל את המטמון בעצמו.
+  if (url.origin !== location.origin) return;
+
+  // דף האפליקציה: רשת קודם, כדי שעדכונים ייקלטו בריענון אחד
+  if (req.mode === "navigate" || /\.html?($|\?)/.test(url.pathname)) {
     event.respondWith(
       fetch(req).then(res => {
         const copy = res.clone();
@@ -53,10 +49,10 @@ self.addEventListener("fetch", event => {
     return;
   }
 
-  // שאר הקבצים: מטמון קודם
+  // שאר הקבצים שלנו: מטמון קודם
   event.respondWith(
     caches.match(req).then(hit => hit || fetch(req).then(res => {
-      if (res.ok && new URL(req.url).origin === location.origin) {
+      if (res.ok) {
         const copy = res.clone();
         caches.open(CACHE).then(c => c.put(req, copy)).catch(() => {});
       }
