@@ -173,14 +173,14 @@ function openLesson(id) {
     </section>
 
     <section class="lesson-section">
-      <h3>🏋️ תרגיל</h3>
-      <div class="exercise">${esc(lesson.exercise)}</div>
+      <h3>🏋️ תרגיל קצר • 2–5 דקות</h3>
+      <p class="section-meta">מטרה: לתרגל פעולה אחת קטנה בלי להקליד פרויקט שלם בטלפון.</p><div class="exercise">${esc(lesson.exercise)}</div>
       ${solutionSection("תרגיל", lesson.exercise_solution, "exercise")}
     </section>
 
     <section class="lesson-section">
-      <h3>🔥 Challenge</h3>
-      <div class="callout">${esc(lesson.challenge)}</div>
+      <h3>🔥 Challenge • 5–10 דקות</h3>
+      <p class="section-meta">מטרה: לקחת את אותו רעיון צעד אחד קדימה — יותר חשיבה, עדיין מעט הקלדה.</p><div class="callout">${esc(lesson.challenge)}</div>
       ${solutionSection("Challenge", lesson.challenge_solution, "challenge")}
     </section>
 
@@ -287,27 +287,55 @@ async function ensurePyodide() {
   if (pyodideInstance) return pyodideInstance;
   if (pyLoading) return pyLoading;
 
-  document.querySelector("#pyStatus").textContent = "טוען Python…";
+  const status = document.querySelector("#pyStatus");
+  status.textContent = "טוען Python…";
+
   pyLoading = new Promise((resolve, reject) => {
     const script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js";
+    script.src = "https://cdn.jsdelivr.net/pyodide/v314.0.5/full/pyodide.js";
+    script.async = true;
+
+    const timer = setTimeout(() => {
+      reject(new Error("Pyodide loading timed out after 30 seconds"));
+    }, 30000);
+
     script.onload = async () => {
       try {
-        pyodideInstance = await loadPyodide({
-          indexURL: "https://cdn.jsdelivr.net/pyodide/v0.27.7/full/"
+        if (typeof loadPyodide !== "function") {
+          throw new Error("Pyodide script loaded, but loadPyodide() is unavailable");
+        }
+        const runtime = await loadPyodide({
+          indexURL: "https://cdn.jsdelivr.net/pyodide/v314.0.5/full/"
         });
-        document.querySelector("#pyStatus").textContent = "Python מוכן ✓";
+        const selfTest = runtime.runPython("1 + 2");
+        if (Number(selfTest) !== 3) throw new Error("Python engine self-test failed");
+        clearTimeout(timer);
+        pyodideInstance = runtime;
+        status.textContent = "Python מוכן ✓";
         resolve(pyodideInstance);
       } catch (error) {
+        clearTimeout(timer);
+        status.textContent = "טעינת Python נכשלה";
         reject(error);
       }
     };
-    script.onerror = () => reject(new Error("לא ניתן לטעון את מנוע Python. בדוק חיבור לאינטרנט."));
+
+    script.onerror = () => {
+      clearTimeout(timer);
+      status.textContent = "טעינת Python נכשלה";
+      reject(new Error("Could not download Pyodide from jsDelivr. Check the internet connection and content blockers."));
+    };
+
     document.head.appendChild(script);
   });
-  return pyLoading;
-}
 
+  try {
+    return await pyLoading;
+  } catch (error) {
+    pyLoading = null;
+    throw error;
+  }
+}
 async function runCode() {
   const out = document.querySelector("#codeOutput");
   const button = document.querySelector("#runCode");
@@ -316,20 +344,26 @@ async function runCode() {
 
   try {
     const py = await ensurePyodide();
-    py.runPython("import sys, io\n_buf = io.StringIO()\nsys.stdout = _buf\nsys.stderr = _buf");
+    py.runPython(`
+import sys, io
+_buf = io.StringIO()
+sys.stdout = _buf
+sys.stderr = _buf
+`);
     const result = await py.runPythonAsync(document.querySelector("#codeEditor").value);
-    let printed = py.runPython("_buf.getvalue()");
+    let printed = String(py.runPython("_buf.getvalue()") || "");
     if (result !== undefined && result !== null && String(result) !== "None") {
       printed += (printed ? "\n" : "") + String(result);
     }
     out.textContent = printed || "(הקוד הסתיים ללא פלט)";
   } catch (error) {
-    out.textContent = "Error:\n" + error;
+    const message = error?.message || error?.toString?.() || "Unknown error";
+    out.textContent = "לא הצלחתי להריץ את Python.\n\n" + message + "\n\nאם זו ההרצה הראשונה: ודא שיש חיבור לאינטרנט ונסה שוב.";
+    console.error("Python Lab error:", error);
   } finally {
     button.disabled = false;
   }
 }
-
 document.querySelector("#search").addEventListener("input", render);
 document.querySelector("#difficulty").addEventListener("change", render);
 document.querySelector("#continueBtn").addEventListener("click", () => openLesson(nextLesson().id));

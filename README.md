@@ -63,3 +63,15 @@ Open the GitHub Pages URL in Safari:
 Share → Add to Home Screen → Add
 
 Progress and mastery state are stored locally in the browser.
+
+
+## Mobile-first learning model
+- Fill-in-the-code: 10–60 seconds, minimal typing.
+- Review/predict-output: tap based.
+- Short exercise: 2–5 minutes, one focused concept.
+- Challenge: 5–10 minutes, more reasoning but still phone-friendly.
+- Full solutions remain hidden until requested.
+- Long projects belong in Capstones and are better on a computer.
+
+## Python runtime
+Uses stable Pyodide 314.0.5 and performs a 1 + 2 == 3 self-test after loading. Errors are displayed in readable form.
