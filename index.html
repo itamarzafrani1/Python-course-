@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Python Mastery">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/icon-180.png">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Python Mastery</title>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">PYTHON 3.14 • COMPLETE PATH</div>
+      <h1>Python Mastery</h1>
+      <p>מ־0 עד Backend Production עם pytest, FastAPI, SQL, Async, Security, Docker ו־CI/CD.</p>
+    </div>
+    <div class="progress-ring" id="progressRing"><span id="progressPct">0%</span></div>
+  </header>
+
+  <main>
+    <section class="hero-card">
+      <div>
+        <h2>מסלול לימוד</h2>
+        <p id="summary"></p>
+      </div>
+      <div class="hero-actions">
+        <button id="continueBtn">המשך מהשיעור הבא</button>
+        <button class="secondary" id="resetBtn">איפוס התקדמות</button>
+      </div>
+    </section>
+
+    <section class="controls">
+      <input id="search" type="search" placeholder="חיפוש שיעור, FastAPI, pytest, async...">
+      <select id="difficulty">
+        <option value="">כל הרמות</option>
+        <option>Beginner</option><option>Beginner+</option><option>Intermediate</option>
+        <option>Intermediate+</option><option>Advanced</option><option>Expert</option>
+      </select>
+    </section>
+
+    <section id="levels" class="levels"></section>
+  </main>
+
+  <dialog id="lessonDialog">
+    <article id="lessonContent"></article>
+    <form method="dialog"><button class="close">סגור</button></form>
+  </dialog>
+
+  <nav class="bottom-nav">
+    <button data-jump="top">🏠<span>בית</span></button>
+    <button id="navContinue">▶️<span>המשך</span></button>
+    <button data-jump="progress">📈<span>התקדמות</span></button>
+  </nav>
+
+  <script src="./curriculum.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
