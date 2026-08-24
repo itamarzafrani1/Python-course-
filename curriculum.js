@@ -54,6 +54,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא איך Python עובד.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# פתרון אפשרי לשיעור: איך Python עובד\n# התחל מהעיקרון שנלמד בשיעור והרכב ממנו פתרון קטן וברור.\n\nname = 'Python'\nversion = 3.14\nprint(name, version)\n\n# בדוק גם edge case אחד לפחות וכתוב assert או הדפסה שמוכיחה שהתוצאה נכונה.",
+          "challenge_solution": "# כיוון מלא לפתרון Challenge — איך Python עובד\n# א. פצל את הבעיה לצעדים קטנים.\n# ב. בצע validation לקלט.\n# ג. השתמש בכלי שלמדת בשיעור: Interpreter, CPython, source code, bytecode, runtime, REPL.\n# ד. טפל במקרה קצה אחד לפחות.\n# ה. הוסף בדיקה שמוודאת את התוצאה.\n#\n# נקודת התחלה:\nname = 'Python'\nversion = 3.14\nprint(name, version)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי איך Python עובד פותר.",
+            "עבור על התחביר המרכזי: Interpreter, CPython, source code, bytecode, runtime, REPL.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-איך Python עובד, תקן אותה והרץ שוב.",
+            "code": "name = 'Python'\nversion = 3.14\nprint(name, version)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -100,6 +122,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא התקנה וגרסאות.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# פתרון אפשרי לשיעור: התקנה וגרסאות\n# התחל מהעיקרון שנלמד בשיעור והרכב ממנו פתרון קטן וברור.\n\npython --version\n\n# בדוק גם edge case אחד לפחות וכתוב assert או הדפסה שמוכיחה שהתוצאה נכונה.",
+          "challenge_solution": "# כיוון מלא לפתרון Challenge — התקנה וגרסאות\n# א. פצל את הבעיה לצעדים קטנים.\n# ב. בצע validation לקלט.\n# ג. השתמש בכלי שלמדת בשיעור: Python 3.14, python --version, PATH, Windows/macOS/Linux.\n# ד. טפל במקרה קצה אחד לפחות.\n# ה. הוסף בדיקה שמוודאת את התוצאה.\n#\n# נקודת התחלה:\npython --version",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי התקנה וגרסאות פותר.",
+            "עבור על התחביר המרכזי: Python 3.14, python --version, PATH, Windows/macOS/Linux.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-התקנה וגרסאות, תקן אותה והרץ שוב.",
+            "code": "python --version",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -146,6 +190,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Terminal ופקודות בסיס.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# פתרון אפשרי לשיעור: Terminal ופקודות בסיס\n# התחל מהעיקרון שנלמד בשיעור והרכב ממנו פתרון קטן וברור.\n\npython main.py\n\n# בדוק גם edge case אחד לפחות וכתוב assert או הדפסה שמוכיחה שהתוצאה נכונה.",
+          "challenge_solution": "# כיוון מלא לפתרון Challenge — Terminal ופקודות בסיס\n# א. פצל את הבעיה לצעדים קטנים.\n# ב. בצע validation לקלט.\n# ג. השתמש בכלי שלמדת בשיעור: pwd/cd/ls, mkdir, files, running scripts.\n# ד. טפל במקרה קצה אחד לפחות.\n# ה. הוסף בדיקה שמוודאת את התוצאה.\n#\n# נקודת התחלה:\npython main.py",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Terminal ופקודות בסיס פותר.",
+            "עבור על התחביר המרכזי: pwd/cd/ls, mkdir, files, running scripts.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Terminal ופקודות בסיס, תקן אותה והרץ שוב.",
+            "code": "python main.py",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -192,6 +258,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Virtual Environments.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# פתרון אפשרי לשיעור: Virtual Environments\n# התחל מהעיקרון שנלמד בשיעור והרכב ממנו פתרון קטן וברור.\n\npython -m venv .venv\n\n# בדוק גם edge case אחד לפחות וכתוב assert או הדפסה שמוכיחה שהתוצאה נכונה.",
+          "challenge_solution": "# כיוון מלא לפתרון Challenge — Virtual Environments\n# א. פצל את הבעיה לצעדים קטנים.\n# ב. בצע validation לקלט.\n# ג. השתמש בכלי שלמדת בשיעור: venv, activation, isolation, requirements.\n# ד. טפל במקרה קצה אחד לפחות.\n# ה. הוסף בדיקה שמוודאת את התוצאה.\n#\n# נקודת התחלה:\npython -m venv .venv",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Virtual Environments פותר.",
+            "עבור על התחביר המרכזי: venv, activation, isolation, requirements.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Virtual Environments, תקן אותה והרץ שוב.",
+            "code": "python -m venv .venv",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -238,6 +326,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא pip ו-Packages.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# פתרון אפשרי לשיעור: pip ו-Packages\n# התחל מהעיקרון שנלמד בשיעור והרכב ממנו פתרון קטן וברור.\n\npython -m pip install requests\n\n# בדוק גם edge case אחד לפחות וכתוב assert או הדפסה שמוכיחה שהתוצאה נכונה.",
+          "challenge_solution": "# כיוון מלא לפתרון Challenge — pip ו-Packages\n# א. פצל את הבעיה לצעדים קטנים.\n# ב. בצע validation לקלט.\n# ג. השתמש בכלי שלמדת בשיעור: PyPI, install/uninstall/list/freeze, dependency pinning.\n# ד. טפל במקרה קצה אחד לפחות.\n# ה. הוסף בדיקה שמוודאת את התוצאה.\n#\n# נקודת התחלה:\npython -m pip install requests",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי pip ו-Packages פותר.",
+            "עבור על התחביר המרכזי: PyPI, install/uninstall/list/freeze, dependency pinning.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-pip ו-Packages, תקן אותה והרץ שוב.",
+            "code": "python -m pip install requests",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -284,6 +394,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא VS Code / PyCharm.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# פתרון אפשרי לשיעור: VS Code / PyCharm\n# התחל מהעיקרון שנלמד בשיעור והרכב ממנו פתרון קטן וברור.\n\nbreakpoint()\n\n# בדוק גם edge case אחד לפחות וכתוב assert או הדפסה שמוכיחה שהתוצאה נכונה.",
+          "challenge_solution": "# כיוון מלא לפתרון Challenge — VS Code / PyCharm\n# א. פצל את הבעיה לצעדים קטנים.\n# ב. בצע validation לקלט.\n# ג. השתמש בכלי שלמדת בשיעור: interpreter selection, debugger, breakpoints, formatting.\n# ד. טפל במקרה קצה אחד לפחות.\n# ה. הוסף בדיקה שמוודאת את התוצאה.\n#\n# נקודת התחלה:\nbreakpoint()",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי VS Code / PyCharm פותר.",
+            "עבור על התחביר המרכזי: interpreter selection, debugger, breakpoints, formatting.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-VS Code / PyCharm, תקן אותה והרץ שוב.",
+            "code": "breakpoint()",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -330,6 +462,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Git למפתח Python.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# פתרון אפשרי לשיעור: Git למפתח Python\n# התחל מהעיקרון שנלמד בשיעור והרכב ממנו פתרון קטן וברור.\n\ngit status\n\n# בדוק גם edge case אחד לפחות וכתוב assert או הדפסה שמוכיחה שהתוצאה נכונה.",
+          "challenge_solution": "# כיוון מלא לפתרון Challenge — Git למפתח Python\n# א. פצל את הבעיה לצעדים קטנים.\n# ב. בצע validation לקלט.\n# ג. השתמש בכלי שלמדת בשיעור: init, status, add, commit, branch, .gitignore.\n# ד. טפל במקרה קצה אחד לפחות.\n# ה. הוסף בדיקה שמוודאת את התוצאה.\n#\n# נקודת התחלה:\ngit status",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Git למפתח Python פותר.",
+            "עבור על התחביר המרכזי: init, status, add, commit, branch, .gitignore.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Git למפתח Python, תקן אותה והרץ שוב.",
+            "code": "git status",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -384,6 +538,28 @@ window.COURSE_DATA = {
             "prompt": "השלם ערך למשתנה age.",
             "code": "age = ____\nprint(age)",
             "answer": "30"
+          },
+          "exercise_solution": "name = \"Dana\"\nage = 30\nheight = 1.72\nis_active = True\nnothing = None\n\nfor value in [name, age, height, is_active, nothing]:\n    print(value, type(value))",
+          "challenge_solution": "a = [1, 2]\nb = a\nb.append(3)\n\nprint(a)          # [1, 2, 3]\nprint(b)          # [1, 2, 3]\nprint(a is b)     # True\n\n# a ו-b מצביעים לאותו list בזיכרון, לכן mutation דרך b נראה גם דרך a.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי משתנים ושמות פותר.",
+            "עבור על התחביר המרכזי: assignment, naming, dynamic typing, identity.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-משתנים ושמות, תקן אותה והרץ שוב.",
+            "code": "name = 'Dana'\nage = 28\nis_active = True\nprint(f'{name} is {age}, active={is_active}')",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -430,6 +606,28 @@ window.COURSE_DATA = {
             "prompt": "השלם אופרטור חזקה.",
             "code": "result = 2 ____ 5\nprint(result)",
             "answer": "**"
+          },
+          "exercise_solution": "price = 100\nvat_rate = 0.18\ndiscount_rate = 0.10\n\nafter_discount = price * (1 - discount_rate)\nfinal_price = after_discount * (1 + vat_rate)\n\nprint(round(final_price, 2))",
+          "challenge_solution": "import math\n\nvalue = 0.1 + 0.2\nprint(value)                    # 0.30000000000000004\nprint(value == 0.3)             # False\nprint(math.isclose(value, 0.3)) # True",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Numbers פותר.",
+            "עבור על התחביר המרכזי: int, float, complex, arithmetic, rounding.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Numbers, תקן אותה והרץ שוב.",
+            "code": "price = 120\nvat = 0.18\nfinal_price = price * (1 + vat)\nprint(round(final_price, 2))",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -476,6 +674,28 @@ window.COURSE_DATA = {
             "prompt": "הדפס את שלוש האותיות הראשונות.",
             "code": "text = 'Python'\nprint(text[____])",
             "answer": "0:3"
+          },
+          "exercise_solution": "full_name = \"  dana cohen  \"\nclean = full_name.strip().title()\n\nparts = clean.split()\ninitials = \"\".join(part[0] for part in parts)\n\nprint(clean)\nprint(initials)\nprint(len(clean))",
+          "challenge_solution": "email = \"  Dana.Cohen@Example.COM  \"\nemail = email.strip().lower()\nusername, domain = email.split(\"@\", 1)\n\nprint(username)\nprint(domain)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Strings פותר.",
+            "עבור על התחביר המרכזי: quotes, indexing, slicing, methods, immutability.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Strings, תקן אותה והרץ שוב.",
+            "code": "language = 'Python'\nprint(language[:3])\nprint(language[-1])",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -522,6 +742,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא f-strings.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "items = [\n    (\"Keyboard\", 249.90),\n    (\"Mouse\", 99.50),\n    (\"Cable\", 19.00),\n]\n\nfor name, price in items:\n    print(f\"{name:<12} {price:>8.2f}\")",
+          "challenge_solution": "product = \"Laptop\"\nprice = 3999.9\nquantity = 2\ntotal = price * quantity\n\nprint(f\"{product:<15} x{quantity:>2}\")\nprint(f\"{'Total':<15} {total:>10,.2f}\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי f-strings פותר.",
+            "עבור על התחביר המרכזי: formatting, precision, alignment, expressions.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-f-strings, תקן אותה והרץ שוב.",
+            "code": "price = 12.3456\nprint(f'{price:.2f}')",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -568,6 +810,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Booleans ו-None.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def describe(value):\n    if value is None:\n        return \"None\"\n    if value == \"\":\n        return \"empty string\"\n    return \"real value\"\n\nprint(describe(None))\nprint(describe(\"\"))\nprint(describe(\"Python\"))",
+          "challenge_solution": "values = [None, \"\", 0, False, [], \"0\", [0]]\n\nfor value in values:\n    print(repr(value), \"truthy\" if value else \"falsy\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Booleans ו-None פותר.",
+            "עבור על התחביר המרכזי: truthiness, comparisons, is vs ==.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Booleans ו-None, תקן אותה והרץ שוב.",
+            "code": "value = None\nprint(value is None)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -614,6 +878,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא if / elif / else.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def grade(score):\n    if score >= 90:\n        return \"A\"\n    if score >= 80:\n        return \"B\"\n    if score >= 70:\n        return \"C\"\n    if score >= 60:\n        return \"D\"\n    return \"F\"\n\nprint(grade(87))",
+          "challenge_solution": "def validate_age(age):\n    if age < 0:\n        return \"invalid\"\n    if age < 18:\n        return \"child\"\n    if age <= 120:\n        return \"adult\"\n    return \"unlikely age\"\n\nfor age in [-1, 12, 30, 121]:\n    print(age, validate_age(age))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי if / elif / else פותר.",
+            "עבור על התחביר המרכזי: branching, nested conditions, guard clauses.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-if / elif / else, תקן אותה והרץ שוב.",
+            "code": "score = 87\nprint('pass' if score >= 60 else 'fail')",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -660,6 +946,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא for loops.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "scores = [95, 82, 71]\n\nfor index, score in enumerate(scores, start=1):\n    print(index, score)",
+          "challenge_solution": "numbers = [3, 8, 11, 20, 25]\neven_squares = []\n\nfor number in numbers:\n    if number % 2 == 0:\n        even_squares.append(number ** 2)\n\nprint(even_squares)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי for loops פותר.",
+            "עבור על התחביר המרכזי: iteration, range, enumerate.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-for loops, תקן אותה והרץ שוב.",
+            "code": "for i, x in enumerate(['a','b']):\n    print(i, x)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -706,6 +1014,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא while loops.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "commands = iter([\"help\", \"status\", \"exit\"])\n\nwhile True:\n    command = next(commands)\n    if command == \"exit\":\n        break\n    print(\"command:\", command)",
+          "challenge_solution": "attempts = 3\ncorrect_pin = \"1234\"\n\nwhile attempts > 0:\n    entered = \"0000\"   # בדוגמה אמיתית: input(...)\n    if entered == correct_pin:\n        print(\"success\")\n        break\n    attempts -= 1\n    print(\"remaining:\", attempts)\n    break  # רק כדי שהדוגמה לא תרוץ בלי סוף",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי while loops פותר.",
+            "עבור על התחביר המרכזי: state loops, sentinel, break, continue.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-while loops, תקן אותה והרץ שוב.",
+            "code": "n = 3\nwhile n:\n    print(n)\n    n -= 1",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -752,6 +1082,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Input ו-conversion.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "raw = \"42\"\n\ntry:\n    number = int(raw)\n    print(number * 2)\nexcept ValueError:\n    print(\"Please enter a valid integer\")",
+          "challenge_solution": "def parse_positive_int(raw):\n    try:\n        value = int(raw)\n    except ValueError as exc:\n        raise ValueError(\"not an integer\") from exc\n\n    if value <= 0:\n        raise ValueError(\"must be positive\")\n    return value\n\nprint(parse_positive_int(\"12\"))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Input ו-conversion פותר.",
+            "עבור על התחביר המרכזי: input, int/float conversion, validation basics.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Input ו-conversion, תקן אותה והרץ שוב.",
+            "code": "age = int(input('Age: '))",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -806,6 +1158,28 @@ window.COURSE_DATA = {
             "prompt": "הוסף 4 לרשימה.",
             "code": "items = [1, 2, 3]\nitems.____(4)\nprint(items)",
             "answer": "append"
+          },
+          "exercise_solution": "tasks = []\n\ntasks.append(\"learn Python\")\ntasks.append(\"write tests\")\ntasks[0] = \"learn Python deeply\"\ntasks.remove(\"write tests\")\n\nprint(tasks)",
+          "challenge_solution": "def unique_in_order(values):\n    seen = set()\n    result = []\n\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            result.append(value)\n\n    return result\n\nprint(unique_in_order([3, 1, 3, 2, 1, 4]))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Lists פותר.",
+            "עבור על התחביר המרכזי: append, extend, insert, remove, slicing, copy.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Lists, תקן אותה והרץ שוב.",
+            "code": "nums = [1,2,3]\nnums.append(4)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -852,6 +1226,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Tuples.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def min_max(values):\n    return min(values), max(values)\n\nminimum, maximum = min_max([8, 2, 10, 4])\nprint(minimum, maximum)",
+          "challenge_solution": "records = [\n    (\"Dana\", 30),\n    (\"Avi\", 25),\n]\n\nfor name, age in records:\n    print(name, age)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Tuples פותר.",
+            "עבור על התחביר המרכזי: immutability, unpacking, return tuples.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Tuples, תקן אותה והרץ שוב.",
+            "code": "x, y = (10, 20)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -898,6 +1294,28 @@ window.COURSE_DATA = {
             "prompt": "קבל את name מהמילון.",
             "code": "user = {'name': 'Dana'}\nprint(user.____('name'))",
             "answer": "get"
+          },
+          "exercise_solution": "user = {\n    \"id\": 7,\n    \"name\": \"Dana\",\n}\n\nuser[\"email\"] = \"dana@example.com\"\nuser[\"name\"] = \"Dana Cohen\"\n\nprint(user)",
+          "challenge_solution": "def frequencies(words):\n    result = {}\n\n    for word in words:\n        result[word] = result.get(word, 0) + 1\n\n    return result\n\nprint(frequencies([\"python\", \"api\", \"python\", \"test\"]))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Dictionaries פותר.",
+            "עבור על התחביר המרכזי: keys, values, items, get, setdefault.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Dictionaries, תקן אותה והרץ שוב.",
+            "code": "user = {'id': 1, 'name':'Dana'}\nprint(user.get('name'))",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -944,6 +1362,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Sets.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "a = [1, 2, 3, 4]\nb = [3, 4, 5]\n\ncommon = set(a) & set(b)\nprint(common)",
+          "challenge_solution": "values = [\"a\", \"b\", \"a\", \"c\", \"b\"]\nduplicates = {x for x in values if values.count(x) > 1}\nprint(duplicates)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Sets פותר.",
+            "עבור על התחביר המרכזי: uniqueness, union, intersection, difference.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Sets, תקן אותה והרץ שוב.",
+            "code": "a={1,2,3}; b={3,4}\nprint(a & b)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -990,6 +1430,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Comprehensions.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "users = [\n    {\"id\": 1, \"name\": \"Dana\"},\n    {\"id\": 2, \"name\": \"Avi\"},\n]\n\nby_id = {user[\"id\"]: user for user in users}\nprint(by_id)",
+          "challenge_solution": "numbers = range(20)\nresult = {\n    n: n ** 2\n    for n in numbers\n    if n % 2 == 0\n}\nprint(result)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Comprehensions פותר.",
+            "עבור על התחביר המרכזי: list/dict/set comprehensions, filtering.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Comprehensions, תקן אותה והרץ שוב.",
+            "code": "squares = [x*x for x in range(10) if x%2==0]",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1036,6 +1498,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את מילת ההחזרה.",
             "code": "def add(a, b):\n    ____ a + b\nprint(add(2, 3))",
             "answer": "return"
+          },
+          "exercise_solution": "def calculate_order_total(items, discount=0.0):\n    if not 0 <= discount <= 1:\n        raise ValueError(\"discount must be between 0 and 1\")\n\n    subtotal = sum(items)\n    return subtotal * (1 - discount)\n\nprint(calculate_order_total([100, 50], 0.10))",
+          "challenge_solution": "def calculate_order_total(items, discount=0.0):\n    if not items:\n        return 0.0\n    if not 0 <= discount <= 1:\n        raise ValueError(\"discount must be between 0 and 1\")\n    if any(price < 0 for price in items):\n        raise ValueError(\"price cannot be negative\")\n\n    return round(sum(items) * (1 - discount), 2)\n\nassert calculate_order_total([100, 50], 0.1) == 135.0\nassert calculate_order_total([], 0.1) == 0.0",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Functions פותר.",
+            "עבור על התחביר המרכזי: def, return, parameters, defaults.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Functions, תקן אותה והרץ שוב.",
+            "code": "def discount_rate(is_member: bool) -> float:\n    if is_member:\n        return 0.10\n    return 0.0\n\nprint(discount_rate(True))",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1082,6 +1566,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא *args ו-**kwargs.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def log_event(message, **metadata):\n    print(message)\n    for key, value in metadata.items():\n        print(f\"{key}={value}\")\n\nlog_event(\"user-login\", user_id=7, ip=\"127.0.0.1\")",
+          "challenge_solution": "def total(*numbers, tax=0.0):\n    subtotal = sum(numbers)\n    return subtotal * (1 + tax)\n\nprint(total(10, 20, 30, tax=0.18))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי *args ו-**kwargs פותר.",
+            "עבור על התחביר המרכזי: variadic args, unpacking.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-*args ו-**kwargs, תקן אותה והרץ שוב.",
+            "code": "def total(*nums): return sum(nums)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1128,6 +1634,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Scope.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "x = 10\n\ndef demo():\n    x = 20\n    return x\n\nprint(demo())  # 20\nprint(x)       # 10",
+          "challenge_solution": "def counter():\n    count = 0\n\n    def increment():\n        nonlocal count\n        count += 1\n        return count\n\n    return increment\n\nnext_count = counter()\nprint(next_count())\nprint(next_count())",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Scope פותר.",
+            "עבור על התחביר המרכזי: local/global/nonlocal, LEGB.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Scope, תקן אותה והרץ שוב.",
+            "code": "x = 10\ndef f():\n    x = 20\n    return x",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1174,6 +1702,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא lambda/map/filter.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "users = [\n    {\"name\": \"A\", \"age\": 30},\n    {\"name\": \"B\", \"age\": 20},\n    {\"name\": \"C\", \"age\": 30},\n]\n\nordered = sorted(users, key=lambda u: (u[\"age\"], u[\"name\"]))\nprint(ordered)",
+          "challenge_solution": "numbers = [1, 2, 3, 4, 5]\neven_squares = list(map(lambda x: x*x, filter(lambda x: x % 2 == 0, numbers)))\nprint(even_squares)\n\n# בפועל comprehension לרוב קריאה יותר:\nprint([x*x for x in numbers if x % 2 == 0])",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי lambda/map/filter פותר.",
+            "עבור על התחביר המרכזי: functional tools and when not to use them.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-lambda/map/filter, תקן אותה והרץ שוב.",
+            "code": "sorted_users = sorted([{'age':30},{'age':20}], key=lambda u:u['age'])",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -1228,6 +1778,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Iterable vs Iterator.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class CountTo:\n    def __init__(self, limit):\n        self.limit = limit\n        self.current = 1\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.current > self.limit:\n            raise StopIteration\n        value = self.current\n        self.current += 1\n        return value\n\nprint(list(CountTo(4)))",
+          "challenge_solution": "values = [10, 20, 30]\niterator = iter(values)\n\nprint(next(iterator))\nprint(next(iterator))\nprint(next(iterator))\n\ntry:\n    print(next(iterator))\nexcept StopIteration:\n    print(\"finished\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Iterable vs Iterator פותר.",
+            "עבור על התחביר המרכזי: iter, next, StopIteration.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Iterable vs Iterator, תקן אותה והרץ שוב.",
+            "code": "it = iter([1,2,3])\nprint(next(it))",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1274,6 +1846,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Generators.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def read_lines(lines):\n    for line in lines:\n        yield line.strip()\n\nfor line in read_lines([\" a\\n\", \" b\\n\"]):\n    print(line)",
+          "challenge_solution": "def batches(values, size):\n    batch = []\n    for value in values:\n        batch.append(value)\n        if len(batch) == size:\n            yield batch\n            batch = []\n    if batch:\n        yield batch\n\nprint(list(batches(range(7), 3)))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Generators פותר.",
+            "עבור על התחביר המרכזי: yield, lazy evaluation, pipelines.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Generators, תקן אותה והרץ שוב.",
+            "code": "def count(n):\n    for i in range(n):\n        yield i",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1320,6 +1914,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Decorators.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from functools import wraps\nfrom time import perf_counter\n\ndef measure(fn):\n    @wraps(fn)\n    def wrapper(*args, **kwargs):\n        start = perf_counter()\n        result = fn(*args, **kwargs)\n        print(\"seconds:\", perf_counter() - start)\n        return result\n    return wrapper\n\n@measure\ndef work():\n    return sum(range(1000))\n\nprint(work())",
+          "challenge_solution": "from functools import wraps\n\ndef require_role(required):\n    def decorate(fn):\n        @wraps(fn)\n        def wrapper(user, *args, **kwargs):\n            if user[\"role\"] != required:\n                raise PermissionError(\"forbidden\")\n            return fn(user, *args, **kwargs)\n        return wrapper\n    return decorate\n\n@require_role(\"admin\")\ndef delete_user(user, user_id):\n    return f\"deleted {user_id}\" ",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Decorators פותר.",
+            "עבור על התחביר המרכזי: wrappers, functools.wraps, parameterized decorators.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Decorators, תקן אותה והרץ שוב.",
+            "code": "from functools import wraps\n\ndef log_call(fn):\n    @wraps(fn)\n    def wrapper(*a, **kw):\n        print(fn.__name__)\n        return fn(*a, **kw)\n    return wrapper",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1366,6 +1982,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Context Managers.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from contextlib import contextmanager\nfrom time import perf_counter\n\n@contextmanager\ndef timer():\n    start = perf_counter()\n    try:\n        yield\n    finally:\n        print(\"seconds:\", perf_counter() - start)\n\nwith timer():\n    sum(range(10000))",
+          "challenge_solution": "from contextlib import contextmanager\n\n@contextmanager\ndef managed_resource():\n    print(\"open\")\n    try:\n        yield {\"connected\": True}\n    finally:\n        print(\"close\")\n\nwith managed_resource() as resource:\n    print(resource)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Context Managers פותר.",
+            "עבור על התחביר המרכזי: with, __enter__/__exit__, contextlib.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Context Managers, תקן אותה והרץ שוב.",
+            "code": "from contextlib import contextmanager\n@contextmanager\ndef demo():\n    yield 'ok'",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1412,6 +2050,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Unpacking.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "first, *middle, last = [1, 2, 3, 4, 5]\nprint(first)\nprint(middle)\nprint(last)\n\nbase = {\"a\": 1, \"b\": 2}\noverride = {\"b\": 20, \"c\": 3}\nmerged = {**base, **override}\nprint(merged)",
+          "challenge_solution": "def describe(name, age, city):\n    print(name, age, city)\n\nperson = {\"name\": \"Dana\", \"age\": 30, \"city\": \"Ashkelon\"}\ndescribe(**person)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Unpacking פותר.",
+            "עבור על התחביר המרכזי: starred expressions, dict merging.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Unpacking, תקן אותה והרץ שוב.",
+            "code": "a, *middle, z = [1,2,3,4]",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1458,6 +2118,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Walrus operator.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "values = [\"python\", \"api\", \"\"]\n\niterator = iter(values)\nwhile (value := next(iterator)) != \"\":\n    print(value)",
+          "challenge_solution": "data = [\"10\", \"20\", \"bad\", \"30\"]\n\nvalid = []\nfor raw in data:\n    if (clean := raw.strip()).isdigit():\n        valid.append(int(clean))\n\nprint(valid)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Walrus operator פותר.",
+            "עבור על התחביר המרכזי: assignment expressions and readability.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Walrus operator, תקן אותה והרץ שוב.",
+            "code": "while (line := input('> ')) != 'quit':\n    print(line)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1504,6 +2186,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Pattern Matching.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def handle(command):\n    match command:\n        case [\"add\", value]:\n            return f\"adding {value}\"\n        case [\"delete\", value]:\n            return f\"deleting {value}\"\n        case _:\n            return \"unknown\"\n\nprint(handle([\"add\", \"task\"]))",
+          "challenge_solution": "def classify(payload):\n    match payload:\n        case {\"type\": \"user\", \"id\": int(user_id)}:\n            return f\"user:{user_id}\"\n        case {\"type\": \"error\", \"message\": str(message)}:\n            return f\"error:{message}\"\n        case _:\n            return \"unsupported\"\n\nprint(classify({\"type\": \"user\", \"id\": 7}))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Pattern Matching פותר.",
+            "עבור על התחביר המרכזי: match/case, guards, destructuring.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Pattern Matching, תקן אותה והרץ שוב.",
+            "code": "def handle(cmd):\n    match cmd:\n        case ['add', x]: return x\n        case _: return None",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -1558,6 +2262,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Classes & Objects.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class User:\n    def __init__(self, name, email):\n        self.name = name\n        self.email = email\n\n    def display(self):\n        return f\"{self.name} <{self.email}>\"\n\nuser = User(\"Dana\", \"dana@example.com\")\nprint(user.display())",
+          "challenge_solution": "class BankAccount:\n    def __init__(self, owner, balance=0):\n        self.owner = owner\n        self.balance = balance\n\n    def deposit(self, amount):\n        if amount <= 0:\n            raise ValueError(\"amount must be positive\")\n        self.balance += amount\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError(\"insufficient funds\")\n        self.balance -= amount",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Classes & Objects פותר.",
+            "עבור על התחביר המרכזי: class, self, state, methods.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Classes & Objects, תקן אותה והרץ שוב.",
+            "code": "class User:\n    def __init__(self, name): self.name=name",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1604,6 +2330,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Class/Static Methods.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class User:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    @classmethod\n    def from_dict(cls, data):\n        return cls(data[\"name\"], data[\"age\"])\n\nuser = User.from_dict({\"name\": \"Dana\", \"age\": 30})\nprint(user.name)",
+          "challenge_solution": "class Temperature:\n    def __init__(self, celsius):\n        self.celsius = celsius\n\n    @classmethod\n    def from_fahrenheit(cls, f):\n        return cls((f - 32) * 5 / 9)\n\n    @staticmethod\n    def is_freezing(celsius):\n        return celsius <= 0",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Class/Static Methods פותר.",
+            "עבור על התחביר המרכזי: @classmethod, @staticmethod, alternate constructors.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Class/Static Methods, תקן אותה והרץ שוב.",
+            "code": "class Temperature:\n    @classmethod\n    def from_f(cls, f): return cls()",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1650,6 +2398,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Properties.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class Product:\n    def __init__(self, price):\n        self.price = price\n\n    @property\n    def price(self):\n        return self._price\n\n    @price.setter\n    def price(self, value):\n        if value < 0:\n            raise ValueError(\"price cannot be negative\")\n        self._price = value\n\np = Product(10)\nprint(p.price)",
+          "challenge_solution": "class Celsius:\n    def __init__(self, value):\n        self.value = value\n\n    @property\n    def fahrenheit(self):\n        return self.value * 9 / 5 + 32\n\nprint(Celsius(0).fahrenheit)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Properties פותר.",
+            "עבור על התחביר המרכזי: @property, setters, validation.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Properties, תקן אותה והרץ שוב.",
+            "code": "class Product:\n    @property\n    def price(self): return self._price",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1696,6 +2466,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Inheritance.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class User:\n    def role(self):\n        return \"user\"\n\nclass Admin(User):\n    def role(self):\n        return \"admin\"\n\nprint(Admin().role())",
+          "challenge_solution": "# Composition עדיפה כשאין באמת יחס is-a.\nclass Logger:\n    def log(self, message):\n        print(message)\n\nclass OrderService:\n    def __init__(self, logger):\n        self.logger = logger\n\n    def create(self):\n        self.logger.log(\"order created\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Inheritance פותר.",
+            "עבור על התחביר המרכזי: super, overriding, MRO.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Inheritance, תקן אותה והרץ שוב.",
+            "code": "class Admin(User):\n    pass",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1742,6 +2534,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Composition.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class PaymentGateway:\n    def charge(self, amount):\n        return f\"charged {amount}\"\n\nclass Order:\n    def __init__(self, payment):\n        self.payment = payment\n\n    def pay(self, amount):\n        return self.payment.charge(amount)\n\nprint(Order(PaymentGateway()).pay(100))",
+          "challenge_solution": "class EmailSender:\n    def send(self, message):\n        return f\"email:{message}\"\n\nclass NotificationService:\n    def __init__(self, sender):\n        self.sender = sender\n\n    def notify(self, message):\n        return self.sender.send(message)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Composition פותר.",
+            "עבור על התחביר המרכזי: has-a relationships, dependency injection.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Composition, תקן אותה והרץ שוב.",
+            "code": "class Order:\n    def __init__(self, payment): self.payment=payment",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1788,6 +2602,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Dataclasses.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from dataclasses import dataclass\n\n@dataclass\nclass User:\n    id: int\n    name: str\n    active: bool = True\n\nprint(User(1, \"Dana\"))",
+          "challenge_solution": "from dataclasses import dataclass\n\n@dataclass(frozen=True, order=True)\nclass Money:\n    amount: int\n    currency: str = \"ILS\"\n\na = Money(10)\nb = Money(20)\nprint(a < b)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Dataclasses פותר.",
+            "עבור על התחביר המרכזי: @dataclass, frozen, field, ordering.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Dataclasses, תקן אותה והרץ שוב.",
+            "code": "from dataclasses import dataclass\n@dataclass\nclass Point:\n    x:int\n    y:int",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1834,6 +2670,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Enums.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from enum import StrEnum\n\nclass OrderStatus(StrEnum):\n    PENDING = \"pending\"\n    PAID = \"paid\"\n    CANCELLED = \"cancelled\"\n\nprint(OrderStatus.PAID.value)",
+          "challenge_solution": "from enum import StrEnum\n\nclass Role(StrEnum):\n    ADMIN = \"admin\"\n    USER = \"user\"\n\ndef can_delete(role):\n    return role is Role.ADMIN\n\nprint(can_delete(Role.ADMIN))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Enums פותר.",
+            "עבור על התחביר המרכזי: Enum, StrEnum, domain states.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Enums, תקן אותה והרץ שוב.",
+            "code": "from enum import StrEnum\nclass Status(StrEnum):\n    ACTIVE='active'",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1880,6 +2738,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Protocols & ABC.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from typing import Protocol\n\nclass Sender(Protocol):\n    def send(self, message: str) -> None: ...\n\nclass ConsoleSender:\n    def send(self, message: str) -> None:\n        print(message)\n\ndef notify(sender: Sender, message: str):\n    sender.send(message)\n\nnotify(ConsoleSender(), \"hello\")",
+          "challenge_solution": "from abc import ABC, abstractmethod\n\nclass Repository(ABC):\n    @abstractmethod\n    def get(self, item_id):\n        raise NotImplementedError\n\nclass MemoryRepository(Repository):\n    def get(self, item_id):\n        return {\"id\": item_id}",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Protocols & ABC פותר.",
+            "עבור על התחביר המרכזי: duck typing, typing.Protocol, abstract base classes.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Protocols & ABC, תקן אותה והרץ שוב.",
+            "code": "from typing import Protocol\nclass Sender(Protocol):\n    def send(self, msg:str)->None: ...",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -1926,6 +2806,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא SOLID בפייתון.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class PaymentGateway:\n    def charge(self, amount):\n        return True\n\nclass PaymentService:\n    def __init__(self, gateway):\n        self.gateway = gateway\n\n    def pay(self, amount):\n        return self.gateway.charge(amount)\n\nservice = PaymentService(PaymentGateway())\nprint(service.pay(100))",
+          "challenge_solution": "# SRP: כל מחלקה מטפלת באחריות אחת.\nclass InvoiceCalculator:\n    def total(self, prices):\n        return sum(prices)\n\nclass InvoiceRepository:\n    def save(self, invoice):\n        pass\n\nclass InvoiceMailer:\n    def send(self, invoice):\n        pass",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי SOLID בפייתון פותר.",
+            "עבור על התחביר המרכזי: SRP, OCP, LSP, ISP, DIP.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-SOLID בפייתון, תקן אותה והרץ שוב.",
+            "code": "class PaymentService:\n    def __init__(self, gateway): self.gateway=gateway",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -1980,6 +2882,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Exceptions.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def parse_age(raw):\n    try:\n        age = int(raw)\n    except ValueError as exc:\n        raise ValueError(\"age must be an integer\") from exc\n\n    if age < 0:\n        raise ValueError(\"age cannot be negative\")\n    return age\n\nprint(parse_age(\"30\"))",
+          "challenge_solution": "class InvalidAgeError(ValueError):\n    pass\n\ndef parse_age(raw):\n    try:\n        age = int(raw)\n    except ValueError as exc:\n        raise InvalidAgeError(\"invalid number\") from exc\n\n    if not 0 <= age <= 120:\n        raise InvalidAgeError(\"age out of range\")\n    return age",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Exceptions פותר.",
+            "עבור על התחביר המרכזי: try/except/else/finally, raise.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Exceptions, תקן אותה והרץ שוב.",
+            "code": "try:\n    x=int('x')\nexcept ValueError as e:\n    print(e)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2026,6 +2950,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Custom Exceptions.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class UserNotFoundError(Exception):\n    pass\n\ndef get_user(user_id):\n    if user_id != 1:\n        raise UserNotFoundError(f\"user {user_id} not found\")\n    return {\"id\": 1}\n\nprint(get_user(1))",
+          "challenge_solution": "class DomainError(Exception):\n    pass\n\nclass InsufficientBalanceError(DomainError):\n    pass\n\ndef withdraw(balance, amount):\n    if amount > balance:\n        raise InsufficientBalanceError(\"not enough balance\")\n    return balance - amount",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Custom Exceptions פותר.",
+            "עבור על התחביר המרכזי: domain exceptions, chaining.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Custom Exceptions, תקן אותה והרץ שוב.",
+            "code": "class NotFoundError(Exception):\n    pass",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2072,6 +3018,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Files & pathlib.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from pathlib import Path\n\nroot = Path(\".\")\ncounts = {}\n\nfor path in root.iterdir():\n    if path.is_file():\n        suffix = path.suffix or \"<no suffix>\"\n        counts[suffix] = counts.get(suffix, 0) + 1\n\nprint(counts)",
+          "challenge_solution": "from pathlib import Path\n\ndef find_python_files(root):\n    return list(Path(root).rglob(\"*.py\"))\n\nfor path in find_python_files(\".\"):\n    print(path)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Files & pathlib פותר.",
+            "עבור על התחביר המרכזי: Path, read_text/write_text, directory traversal.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Files & pathlib, תקן אותה והרץ שוב.",
+            "code": "from pathlib import Path\np=Path('data.txt')\np.write_text('hello')",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2118,6 +3086,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא JSON.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import json\n\nusers = [{\"id\": 1, \"name\": \"Dana\"}]\ntext = json.dumps(users, ensure_ascii=False, indent=2)\nprint(text)\n\nloaded = json.loads(text)\nprint(loaded[0][\"name\"])",
+          "challenge_solution": "import json\n\ndef encode_user(user):\n    return json.dumps(user, ensure_ascii=False)\n\ndef decode_user(text):\n    data = json.loads(text)\n    if \"id\" not in data or \"name\" not in data:\n        raise ValueError(\"invalid user\")\n    return data",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי JSON פותר.",
+            "עבור על התחביר המרכזי: json loads/dumps/load/dump.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-JSON, תקן אותה והרץ שוב.",
+            "code": "import json\ntext=json.dumps({'ok':True})",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2164,6 +3154,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא CSV.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import csv\nfrom io import StringIO\n\nsource = StringIO(\"name,score\\nDana,90\\nAvi,70\\n\")\nreader = csv.DictReader(source)\n\npassed = [row for row in reader if int(row[\"score\"]) >= 80]\nprint(passed)",
+          "challenge_solution": "import csv\nfrom io import StringIO\n\nout = StringIO()\nwriter = csv.DictWriter(out, fieldnames=[\"name\", \"score\"])\nwriter.writeheader()\nwriter.writerow({\"name\": \"Dana\", \"score\": 90})\nprint(out.getvalue())",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי CSV פותר.",
+            "עבור על התחביר המרכזי: csv module, DictReader/DictWriter.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-CSV, תקן אותה והרץ שוב.",
+            "code": "import csv",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2210,6 +3222,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Logging.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import logging\n\nlogging.basicConfig(\n    level=logging.INFO,\n    format=\"%(levelname)s %(message)s\",\n)\n\nlogging.info(\"application started\")\nlogging.warning(\"example warning\")",
+          "challenge_solution": "import logging\n\nlogger = logging.getLogger(\"app\")\n\ndef process(user_id):\n    logger.info(\"processing user_id=%s\", user_id)\n    try:\n        return 10 / user_id\n    except ZeroDivisionError:\n        logger.exception(\"processing failed user_id=%s\", user_id)\n        raise",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Logging פותר.",
+            "עבור על התחביר המרכזי: levels, handlers, formatters, structured context.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Logging, תקן אותה והרץ שוב.",
+            "code": "import logging\nlogging.basicConfig(level=logging.INFO)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2256,6 +3290,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Environment variables.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import os\n\ndatabase_url = os.getenv(\"DATABASE_URL\", \"sqlite:///local.db\")\ndebug = os.getenv(\"DEBUG\", \"false\").lower() == \"true\"\n\nprint(database_url)\nprint(debug)",
+          "challenge_solution": "import os\n\ndef required_env(name):\n    value = os.getenv(name)\n    if not value:\n        raise RuntimeError(f\"missing environment variable: {name}\")\n    return value\n\n# api_key = required_env(\"API_KEY\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Environment variables פותר.",
+            "עבור על התחביר המרכזי: os.environ, .env concepts, secrets hygiene.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Environment variables, תקן אותה והרץ שוב.",
+            "code": "import os\napi_key=os.getenv('API_KEY')",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -2310,6 +3366,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Type Hints.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def total(prices: list[float]) -> float:\n    return sum(prices)\n\ndef find_name(user: dict[str, object]) -> str | None:\n    value = user.get(\"name\")\n    return value if isinstance(value, str) else None\n\nprint(total([1.5, 2.5]))",
+          "challenge_solution": "type UserId = int\n\ndef get_user_name(user_id: UserId, users: dict[UserId, str]) -> str | None:\n    return users.get(user_id)\n\nprint(get_user_name(1, {1: \"Dana\"}))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Type Hints פותר.",
+            "עבור על התחביר המרכזי: annotations, unions, optional, collections.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Type Hints, תקן אותה והרץ שוב.",
+            "code": "def greet(name: str) -> str:\n    return f'Hi {name}'",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2356,6 +3434,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Generics.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from typing import TypeVar\n\nT = TypeVar(\"T\")\n\ndef first(items: list[T]) -> T:\n    if not items:\n        raise ValueError(\"empty list\")\n    return items[0]\n\nprint(first([\"a\", \"b\"]))",
+          "challenge_solution": "from typing import Generic, TypeVar\n\nT = TypeVar(\"T\")\n\nclass Box(Generic[T]):\n    def __init__(self, value: T):\n        self.value = value\n\ntext_box = Box[str](\"hello\")\nprint(text_box.value)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Generics פותר.",
+            "עבור על התחביר המרכזי: TypeVar, generic functions/classes.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Generics, תקן אותה והרץ שוב.",
+            "code": "from typing import TypeVar\nT=TypeVar('T')\ndef first(xs:list[T])->T: return xs[0]",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2402,6 +3502,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא TypedDict & Literal.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from typing import TypedDict, Literal\n\nclass UserPayload(TypedDict):\n    name: str\n    role: Literal[\"admin\", \"user\"]\n\npayload: UserPayload = {\"name\": \"Dana\", \"role\": \"user\"}\nprint(payload)",
+          "challenge_solution": "from typing import Literal\n\nHttpMethod = Literal[\"GET\", \"POST\", \"PUT\", \"DELETE\"]\n\ndef request(method: HttpMethod) -> str:\n    return method\n\nprint(request(\"GET\"))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי TypedDict & Literal פותר.",
+            "עבור על התחביר המרכזי: structured dicts, constrained strings.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-TypedDict & Literal, תקן אותה והרץ שוב.",
+            "code": "from typing import TypedDict\nclass UserRow(TypedDict):\n    id:int\n    name:str",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2448,6 +3570,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא mypy/pyright concepts.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def add(a: int, b: int) -> int:\n    return a + b\n\n# static type checker אמור לזהות את זה:\n# result = add(\"1\", 2)\n\nresult = add(1, 2)\nprint(result)",
+          "challenge_solution": "def normalize(value: str | None) -> str:\n    if value is None:\n        return \"\"\n    return value.strip().lower()\n\nprint(normalize(None))\nprint(normalize(\" Python \"))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי mypy/pyright concepts פותר.",
+            "עבור על התחביר המרכזי: static analysis, gradual typing.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-mypy/pyright concepts, תקן אותה והרץ שוב.",
+            "code": "def add(a:int,b:int)->int: return a+b",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2494,6 +3638,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Formatting & linting.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# דוגמת workflow:\n# python -m pip install ruff\n# ruff check .\n# ruff format .\n\ndef add(a: int, b: int) -> int:\n    return a + b\n\nprint(add(1, 2))",
+          "challenge_solution": "# pyproject.toml example:\n# [tool.ruff]\n# line-length = 100\n#\n# [tool.ruff.lint]\n# select = [\"E\", \"F\", \"I\", \"B\"]\n\nprint(\"configure lint rules in pyproject.toml\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Formatting & linting פותר.",
+            "עבור על התחביר המרכזי: Ruff, Black concepts, import hygiene.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Formatting & linting, תקן אותה והרץ שוב.",
+            "code": "ruff check .",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2540,6 +3706,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא pyproject.toml.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# pyproject.toml\n[project]\nname = \"demo-app\"\nversion = \"0.1.0\"\nrequires-python = \">=3.12\"\ndependencies = [\n  \"fastapi\",\n  \"uvicorn\",\n]\n\n[tool.pytest.ini_options]\ntestpaths = [\"tests\"]",
+          "challenge_solution": "# pyproject.toml\n[project.optional-dependencies]\ndev = [\n  \"pytest\",\n  \"pytest-cov\",\n  \"ruff\",\n]\n\n[tool.ruff]\nline-length = 100",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי pyproject.toml פותר.",
+            "עבור על התחביר המרכזי: project metadata, dependencies, tool config.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-pyproject.toml, תקן אותה והרץ שוב.",
+            "code": "[project]\nname = 'demo'\nversion = '0.1.0'",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2586,6 +3774,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Modules & Packages.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# structure:\n# myapp/\n#   __init__.py\n#   services/\n#     __init__.py\n#     users.py\n#\n# import:\n# from myapp.services.users import create_user\n\nprint(\"package structure ready\")",
+          "challenge_solution": "# prefer absolute imports in application code:\n# from myapp.repositories.users import UserRepository\n#\n# relative import can be useful inside a package:\n# from .models import User\n\nprint(\"avoid circular imports by keeping boundaries clear\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Modules & Packages פותר.",
+            "עבור על התחביר המרכזי: imports, __init__, absolute vs relative.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Modules & Packages, תקן אותה והרץ שוב.",
+            "code": "from myapp.services import users",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -2640,6 +3850,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Testing mindset.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def is_even(number):\n    return number % 2 == 0\n\ndef test_even_number():\n    # Arrange\n    number = 4\n    # Act\n    result = is_even(number)\n    # Assert\n    assert result is True",
+          "challenge_solution": "def divide(a, b):\n    if b == 0:\n        raise ValueError(\"b cannot be zero\")\n    return a / b\n\ndef test_divide_happy_path():\n    assert divide(10, 2) == 5\n\ndef test_divide_rejects_zero():\n    import pytest\n    with pytest.raises(ValueError):\n        divide(10, 0)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Testing mindset פותר.",
+            "עבור על התחביר המרכזי: arrange-act-assert, deterministic tests, test pyramid.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Testing mindset, תקן אותה והרץ שוב.",
+            "code": "def add(a,b): return a+b\n\ndef test_add():\n    assert add(2,3)==5",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2686,6 +3918,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את מילת הבדיקה.",
             "code": "def test_add():\n    ____ 2 + 3 == 5",
             "answer": "assert"
+          },
+          "exercise_solution": "def normalize_email(email: str) -> str:\n    return email.strip().lower()\n\ndef test_normalize_email_lowercases():\n    assert normalize_email(\"A@B.COM\") == \"a@b.com\"\n\ndef test_normalize_email_strips_spaces():\n    assert normalize_email(\"  a@b.com  \") == \"a@b.com\"\n\ndef test_normalize_email_empty():\n    assert normalize_email(\"   \") == \"\" ",
+          "challenge_solution": "# run examples:\n# pytest -q\n# pytest -k normalize\n# pytest -x\n# pytest tests/test_users.py::test_create_user\n\ndef test_example():\n    assert 2 + 2 == 4",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי pytest basics פותר.",
+            "עבור על התחביר המרכזי: discovery, assert rewriting, -q/-k/-x.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-pytest basics, תקן אותה והרץ שוב.",
+            "code": "def add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(2, 3) == 5\n\nprint(add(2, 3))",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2732,6 +3986,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Fixtures.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import pytest\n\n@pytest.fixture\ndef user():\n    return {\"id\": 1, \"name\": \"Dana\"}\n\ndef test_user_name(user):\n    assert user[\"name\"] == \"Dana\" ",
+          "challenge_solution": "import pytest\n\n@pytest.fixture\ndef db():\n    fake = {}\n    yield fake\n    fake.clear()\n\n@pytest.fixture\ndef user(db):\n    db[1] = {\"id\": 1, \"name\": \"Dana\"}\n    return db[1]",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Fixtures פותר.",
+            "עבור על התחביר המרכזי: @pytest.fixture, scopes, dependencies.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Fixtures, תקן אותה והרץ שוב.",
+            "code": "import pytest\n@pytest.fixture\ndef user(): return {'id':1}",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2778,6 +4054,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Parametrize.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import pytest\n\n@pytest.mark.parametrize(\n    \"value,expected\",\n    [\n        (2, True),\n        (3, False),\n        (0, True),\n        (-2, True),\n    ],\n)\ndef test_is_even(value, expected):\n    assert (value % 2 == 0) is expected",
+          "challenge_solution": "import pytest\n\n@pytest.mark.parametrize(\"raw,expected\", [\n    (\" A@B.COM \", \"a@b.com\"),\n    (\"x@y.io\", \"x@y.io\"),\n    (\"   \", \"\"),\n])\ndef test_normalize(raw, expected):\n    assert raw.strip().lower() == expected",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Parametrize פותר.",
+            "עבור על התחביר המרכזי: @pytest.mark.parametrize.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Parametrize, תקן אותה והרץ שוב.",
+            "code": "import pytest\n@pytest.mark.parametrize('a,b,e',[(1,2,3),(2,3,5)])\ndef test_add(a,b,e): assert a+b==e",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2824,6 +4122,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Exceptions & approx.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import pytest\n\ndef divide(a, b):\n    return a / b\n\ndef test_zero_division():\n    with pytest.raises(ZeroDivisionError):\n        divide(1, 0)\n\ndef test_float():\n    assert 0.1 + 0.2 == pytest.approx(0.3)",
+          "challenge_solution": "import pytest\n\ndef parse_positive(raw):\n    value = int(raw)\n    if value <= 0:\n        raise ValueError(\"must be positive\")\n    return value\n\n@pytest.mark.parametrize(\"raw\", [\"0\", \"-1\"])\ndef test_rejects_non_positive(raw):\n    with pytest.raises(ValueError, match=\"positive\"):\n        parse_positive(raw)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Exceptions & approx פותר.",
+            "עבור על התחביר המרכזי: pytest.raises, pytest.approx.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Exceptions & approx, תקן אותה והרץ שוב.",
+            "code": "import pytest\ndef test_zero():\n    with pytest.raises(ZeroDivisionError): 1/0",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2870,6 +4190,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Monkeypatch & Mock.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from unittest.mock import Mock\n\nsender = Mock()\nsender.send.return_value = True\n\nresult = sender.send(\"hello\")\n\nassert result is True\nsender.send.assert_called_once_with(\"hello\")",
+          "challenge_solution": "def fetch_user(client, user_id):\n    return client.get(f\"/users/{user_id}\")\n\nclass FakeResponse:\n    def json(self):\n        return {\"id\": 7}\n\nclass FakeClient:\n    def get(self, url):\n        assert url == \"/users/7\"\n        return FakeResponse()\n\nassert fetch_user(FakeClient(), 7).json()[\"id\"] == 7",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Monkeypatch & Mock פותר.",
+            "עבור על התחביר המרכזי: monkeypatch, unittest.mock, patch boundaries.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Monkeypatch & Mock, תקן אותה והרץ שוב.",
+            "code": "from unittest.mock import Mock\nsender=Mock()",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2916,6 +4258,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Temporary files.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def test_export(tmp_path):\n    output = tmp_path / \"result.txt\"\n    output.write_text(\"hello\", encoding=\"utf-8\")\n\n    assert output.exists()\n    assert output.read_text(encoding=\"utf-8\") == \"hello\" ",
+          "challenge_solution": "def save_json(path, text):\n    path.write_text(text, encoding=\"utf-8\")\n\ndef test_save_json(tmp_path):\n    path = tmp_path / \"data.json\"\n    save_json(path, '{\"ok\": true}')\n    assert '\"ok\": true' in path.read_text(encoding=\"utf-8\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Temporary files פותר.",
+            "עבור על התחביר המרכזי: tmp_path, filesystem tests.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Temporary files, תקן אותה והרץ שוב.",
+            "code": "def test_file(tmp_path):\n    p=tmp_path/'x.txt'; p.write_text('a'); assert p.read_text()=='a'",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -2962,6 +4326,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Markers.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import pytest\n\n@pytest.mark.slow\ndef test_report_generation():\n    assert True\n\n# pytest -m \"not slow\" ",
+          "challenge_solution": "import pytest\n\n@pytest.mark.integration\ndef test_database_roundtrip():\n    assert True\n\n@pytest.mark.skip(reason=\"feature not available\")\ndef test_future_feature():\n    pass",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Markers פותר.",
+            "עבור על התחביר המרכזי: custom markers, skip, xfail.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Markers, תקן אותה והרץ שוב.",
+            "code": "import pytest\n@pytest.mark.slow\ndef test_slow(): pass",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3008,6 +4394,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Coverage.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Commands:\n# pytest --cov=myapp --cov-report=term-missing\n#\n# Then inspect missing lines/branches and write behavior tests.\n\ndef classify(value):\n    if value > 0:\n        return \"positive\"\n    if value < 0:\n        return \"negative\"\n    return \"zero\" ",
+          "challenge_solution": "def test_classify_all_branches():\n    assert classify(1) == \"positive\"\n    assert classify(-1) == \"negative\"\n    assert classify(0) == \"zero\"\n\n# High coverage is useful only when tests assert meaningful behavior.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Coverage פותר.",
+            "עבור על התחביר המרכזי: branch coverage, meaningful coverage, pytest-cov.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Coverage, תקן אותה והרץ שוב.",
+            "code": "pytest --cov=myapp --cov-report=term-missing",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3054,6 +4462,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Test architecture.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def make_user(**overrides):\n    user = {\n        \"id\": 1,\n        \"name\": \"Dana\",\n        \"active\": True,\n    }\n    return user | overrides\n\nassert make_user(name=\"Avi\")[\"name\"] == \"Avi\" ",
+          "challenge_solution": "class UserBuilder:\n    def __init__(self):\n        self.data = {\"id\": 1, \"name\": \"Dana\"}\n\n    def named(self, name):\n        self.data[\"name\"] = name\n        return self\n\n    def build(self):\n        return self.data.copy()\n\nuser = UserBuilder().named(\"Avi\").build()",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Test architecture פותר.",
+            "עבור על התחביר המרכזי: factories, builders, fixtures composition, anti-patterns.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Test architecture, תקן אותה והרץ שוב.",
+            "code": "def make_user(**overrides):\n    return {'id':1,'name':'A'} | overrides",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -3108,6 +4538,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Relational basics.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "CREATE TABLE users (\n    id BIGSERIAL PRIMARY KEY,\n    email TEXT NOT NULL UNIQUE,\n    name TEXT NOT NULL\n);\n\nCREATE TABLE orders (\n    id BIGSERIAL PRIMARY KEY,\n    user_id BIGINT NOT NULL REFERENCES users(id),\n    total NUMERIC(12,2) NOT NULL\n);",
+          "challenge_solution": "-- users 1:N orders\n-- orders N:M products באמצעות order_items\n\nCREATE TABLE order_items (\n    order_id BIGINT REFERENCES orders(id),\n    product_id BIGINT REFERENCES products(id),\n    quantity INT NOT NULL CHECK (quantity > 0),\n    PRIMARY KEY (order_id, product_id)\n);",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Relational basics פותר.",
+            "עבור על התחביר המרכזי: tables, rows, PK/FK, normalization, indexes.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Relational basics, תקן אותה והרץ שוב.",
+            "code": "SELECT id, name FROM users WHERE active = true;",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3154,6 +4606,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא CRUD SQL.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "INSERT INTO users(name, email)\nVALUES ('Dana', 'dana@example.com');\n\nSELECT id, name, email\nFROM users\nWHERE email = 'dana@example.com';\n\nUPDATE users\nSET name = 'Dana Cohen'\nWHERE email = 'dana@example.com';\n\nDELETE FROM users\nWHERE email = 'dana@example.com';",
+          "challenge_solution": "-- Use parameters from application code:\nSELECT id, name\nFROM users\nWHERE id = ?;\n\n-- Do not concatenate untrusted input into SQL strings.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי CRUD SQL פותר.",
+            "עבור על התחביר המרכזי: INSERT/SELECT/UPDATE/DELETE.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-CRUD SQL, תקן אותה והרץ שוב.",
+            "code": "INSERT INTO users(name) VALUES ('Dana');",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3200,6 +4674,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא JOIN & aggregation.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "SELECT\n    u.id,\n    u.name,\n    COALESCE(SUM(o.total), 0) AS total_spent\nFROM users AS u\nLEFT JOIN orders AS o\n    ON o.user_id = u.id\nGROUP BY u.id, u.name\nORDER BY total_spent DESC;",
+          "challenge_solution": "SELECT\n    u.id,\n    u.name,\n    COUNT(o.id) AS order_count,\n    AVG(o.total) AS avg_order\nFROM users u\nJOIN orders o ON o.user_id = u.id\nGROUP BY u.id, u.name\nHAVING COUNT(o.id) >= 3;",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי JOIN & aggregation פותר.",
+            "עבור על התחביר המרכזי: INNER/LEFT JOIN, GROUP BY, HAVING.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-JOIN & aggregation, תקן אותה והרץ שוב.",
+            "code": "SELECT u.id, COUNT(o.id) FROM users u LEFT JOIN orders o ON o.user_id=u.id GROUP BY u.id;",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3246,6 +4742,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Transactions.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "BEGIN;\n\nUPDATE accounts\nSET balance = balance - 100\nWHERE id = 1;\n\nUPDATE accounts\nSET balance = balance + 100\nWHERE id = 2;\n\nCOMMIT;",
+          "challenge_solution": "-- Application flow:\n-- 1. BEGIN\n-- 2. Lock/read source account\n-- 3. Validate sufficient balance\n-- 4. Debit source\n-- 5. Credit target\n-- 6. COMMIT\n-- Any failure -> ROLLBACK",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Transactions פותר.",
+            "עבור על התחביר המרכזי: ACID, commit, rollback, isolation concepts.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Transactions, תקן אותה והרץ שוב.",
+            "code": "BEGIN;\nUPDATE accounts SET balance=balance-10 WHERE id=1;\nCOMMIT;",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3292,6 +4810,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Indexes.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "CREATE UNIQUE INDEX idx_users_email\nON users(email);\n\nCREATE INDEX idx_orders_user_created\nON orders(user_id, created_at DESC);",
+          "challenge_solution": "-- Before adding an index:\nEXPLAIN ANALYZE\nSELECT *\nFROM orders\nWHERE user_id = 42\nORDER BY created_at DESC\nLIMIT 20;\n\n-- Measure, don't guess.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Indexes פותר.",
+            "עבור על התחביר המרכזי: B-tree concept, selectivity, EXPLAIN.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Indexes, תקן אותה והרץ שוב.",
+            "code": "CREATE INDEX idx_users_email ON users(email);",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3338,6 +4878,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא SQLAlchemy ORM.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from sqlalchemy import String, create_engine\nfrom sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session\n\nclass Base(DeclarativeBase):\n    pass\n\nclass User(Base):\n    __tablename__ = \"users\"\n    id: Mapped[int] = mapped_column(primary_key=True)\n    name: Mapped[str] = mapped_column(String(100))\n\nengine = create_engine(\"sqlite:///:memory:\")\nBase.metadata.create_all(engine)\n\nwith Session(engine) as session:\n    session.add(User(name=\"Dana\"))\n    session.commit()",
+          "challenge_solution": "from sqlalchemy import select\n\nwith Session(engine) as session:\n    users = session.scalars(\n        select(User).where(User.name == \"Dana\")\n    ).all()\n    print(users)",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי SQLAlchemy ORM פותר.",
+            "עבור על התחביר המרכזי: engine, session, declarative models.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-SQLAlchemy ORM, תקן אותה והרץ שוב.",
+            "code": "from sqlalchemy.orm import DeclarativeBase\nclass Base(DeclarativeBase): pass",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3384,6 +4946,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Relationships.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Conceptual SQLAlchemy mapping:\n# class User(Base):\n#     orders: Mapped[list[\"Order\"]] = relationship(back_populates=\"user\")\n#\n# class Order(Base):\n#     user_id: Mapped[int] = mapped_column(ForeignKey(\"users.id\"))\n#     user: Mapped[\"User\"] = relationship(back_populates=\"orders\")\n\nprint(\"one-to-many mapping\")",
+          "challenge_solution": "# For N:M use an association table.\n# Avoid accidental N+1 queries; choose selectinload/joinedload when appropriate.\n\nprint(\"model relationships based on access patterns\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Relationships פותר.",
+            "עבור על התחביר המרכזי: one-to-many, many-to-many, eager/lazy loading.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Relationships, תקן אותה והרץ שוב.",
+            "code": "# relationship(...)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3430,6 +5014,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Migrations.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# alembic revision --autogenerate -m \"add unique email\"\n# alembic upgrade head\n\n# migration idea:\n# op.create_unique_constraint(\"uq_users_email\", \"users\", [\"email\"])",
+          "challenge_solution": "# Safe rollout for a NOT NULL column:\n# 1. Add nullable column\n# 2. Deploy code writing it\n# 3. Backfill existing rows\n# 4. Add NOT NULL constraint\n# 5. Remove temporary compatibility code\n\nprint(\"expand -> migrate -> contract\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Migrations פותר.",
+            "עבור על התחביר המרכזי: Alembic concepts, revision, upgrade/downgrade.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Migrations, תקן אותה והרץ שוב.",
+            "code": "alembic revision --autogenerate -m 'add users'",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -3484,6 +5090,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא HTTP fundamentals.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Examples:\n# GET /users/7           -> 200 or 404\n# POST /users            -> 201\n# PUT /users/7           -> 200/204\n# DELETE /users/7        -> 204\n# Invalid payload        -> 422/400 depending on contract\n# Unauthorized           -> 401\n# Authenticated forbidden-> 403\n\nprint(\"choose status codes by HTTP semantics\")",
+          "challenge_solution": "# Idempotency:\n# GET, PUT and DELETE are intended to be idempotent.\n# POST usually is not, unless you add an idempotency-key strategy.\n\nprint(\"HTTP semantics are part of your API contract\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי HTTP fundamentals פותר.",
+            "עבור על התחביר המרכזי: methods, status codes, headers, body, idempotency, caching.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-HTTP fundamentals, תקן אותה והרץ שוב.",
+            "code": "GET /users/123 HTTP/1.1",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3530,6 +5158,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא REST design.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Good:\n# GET    /api/v1/tasks\n# POST   /api/v1/tasks\n# GET    /api/v1/tasks/{task_id}\n# PATCH  /api/v1/tasks/{task_id}\n# DELETE /api/v1/tasks/{task_id}\n#\n# Pagination:\n# GET /api/v1/tasks?limit=20&offset=0\n\nprint(\"resources are nouns; HTTP methods express actions\")",
+          "challenge_solution": "# Avoid:\n# POST /createTask\n# GET /deleteTask?id=7\n#\n# Prefer:\n# POST /tasks\n# DELETE /tasks/7\n\nprint(\"consistent resource-oriented design\")",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי REST design פותר.",
+            "עבור על התחביר המרכזי: resources, URLs, pagination, filtering, versioning.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-REST design, תקן אותה והרץ שוב.",
+            "code": "GET /api/v1/users?limit=20&offset=0",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3576,6 +5226,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את מתודת ה-route.",
             "code": "# @app.____('/health')\nprint('health route')",
             "answer": "get"
+          },
+          "exercise_solution": "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/health\")\ndef health():\n    return {\"ok\": True}\n\n# Run locally:\n# uvicorn main:app --reload",
+          "challenge_solution": "from fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\nclass UserOut(BaseModel):\n    id: int\n    name: str\n\n@app.get(\"/users/{user_id}\", response_model=UserOut)\ndef get_user(user_id: int):\n    if user_id != 1:\n        raise HTTPException(status_code=404, detail=\"User not found\")\n    return {\"id\": 1, \"name\": \"Dana\"}",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי FastAPI first app פותר.",
+            "עבור על התחביר המרכזי: FastAPI instance, routes, uvicorn.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-FastAPI first app, תקן אותה והרץ שוב.",
+            "code": "message = 'GET /health -> 200 OK'\nprint(message)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3622,6 +5294,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Path & Query params.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from fastapi import FastAPI, Query\n\napp = FastAPI()\n\n@app.get(\"/users/{user_id}\")\ndef get_user(\n    user_id: int,\n    limit: int = Query(default=20, ge=1, le=100),\n):\n    return {\"id\": user_id, \"limit\": limit}",
+          "challenge_solution": "from typing import Annotated\nfrom fastapi import Query\n\nLimit = Annotated[int, Query(ge=1, le=100)]\n\n@app.get(\"/items\")\ndef list_items(limit: Limit = 20, offset: int = 0):\n    return {\"limit\": limit, \"offset\": offset}",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Path & Query params פותר.",
+            "עבור על התחביר המרכזי: validation, Annotated, defaults.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Path & Query params, תקן אותה והרץ שוב.",
+            "code": "from fastapi import FastAPI\napp=FastAPI()\n@app.get('/users/{user_id}')\ndef get_user(user_id:int, q:str|None=None): return {'id':user_id,'q':q}",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3668,6 +5362,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Pydantic models.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from pydantic import BaseModel, EmailStr\n\nclass UserCreate(BaseModel):\n    name: str\n    email: EmailStr\n\nclass UserRead(BaseModel):\n    id: int\n    name: str\n    email: EmailStr",
+          "challenge_solution": "from pydantic import BaseModel, Field\n\nclass ProductCreate(BaseModel):\n    name: str = Field(min_length=1, max_length=100)\n    price: float = Field(gt=0)\n\nproduct = ProductCreate(name=\"Keyboard\", price=100)\nprint(product.model_dump())",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Pydantic models פותר.",
+            "עבור על התחביר המרכזי: request/response models, validation.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Pydantic models, תקן אותה והרץ שוב.",
+            "code": "from pydantic import BaseModel\nclass UserCreate(BaseModel):\n    name:str\n    email:str",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3714,6 +5430,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Dependency Injection.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from fastapi import Depends\n\ndef get_current_user():\n    return {\"id\": 1, \"role\": \"user\"}\n\n@app.get(\"/me\")\ndef me(user = Depends(get_current_user)):\n    return user",
+          "challenge_solution": "def get_repository():\n    return UserRepository()\n\n@app.get(\"/users/{user_id}\")\ndef get_user(user_id: int, repo = Depends(get_repository)):\n    return repo.get(user_id)\n\n# In tests, override dependency instead of hitting a real DB.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Dependency Injection פותר.",
+            "עבור על התחביר המרכזי: Depends, reusable dependencies.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Dependency Injection, תקן אותה והרץ שוב.",
+            "code": "from fastapi import Depends",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3760,6 +5498,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Error handling.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from fastapi import HTTPException\n\ndef require_user(user):\n    if user is None:\n        raise HTTPException(\n            status_code=404,\n            detail=\"User not found\",\n        )\n    return user",
+          "challenge_solution": "class UserNotFoundError(Exception):\n    pass\n\n# Map domain exception at the HTTP boundary:\n# @app.exception_handler(UserNotFoundError)\n# async def handle_user_not_found(request, exc):\n#     return JSONResponse(status_code=404, content={\"detail\": str(exc)})",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Error handling פותר.",
+            "עבור על התחביר המרכזי: HTTPException, custom handlers.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Error handling, תקן אותה והרץ שוב.",
+            "code": "from fastapi import HTTPException\nraise HTTPException(404,'Not found')",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3806,6 +5566,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Routers.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from fastapi import APIRouter\n\nrouter = APIRouter(prefix=\"/users\", tags=[\"users\"])\n\n@router.get(\"/{user_id}\")\ndef get_user(user_id: int):\n    return {\"id\": user_id}\n\n# app.include_router(router)",
+          "challenge_solution": "# Structure:\n# app/\n#   main.py\n#   api/\n#     users.py\n#     orders.py\n#   services/\n#   repositories/\n#   schemas/\n#\n# Routers coordinate HTTP, not business rules.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Routers פותר.",
+            "עבור על התחביר המרכזי: APIRouter, modular API structure.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Routers, תקן אותה והרץ שוב.",
+            "code": "from fastapi import APIRouter\nrouter=APIRouter(prefix='/users')",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3852,6 +5634,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Middleware.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from time import perf_counter\n\n@app.middleware(\"http\")\nasync def timing_middleware(request, call_next):\n    start = perf_counter()\n    response = await call_next(request)\n    response.headers[\"X-Process-Time\"] = str(perf_counter() - start)\n    return response",
+          "challenge_solution": "import uuid\n\n@app.middleware(\"http\")\nasync def request_id_middleware(request, call_next):\n    request_id = request.headers.get(\"X-Request-ID\", str(uuid.uuid4()))\n    response = await call_next(request)\n    response.headers[\"X-Request-ID\"] = request_id\n    return response",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Middleware פותר.",
+            "עבור על התחביר המרכזי: request lifecycle, CORS, timing, request IDs.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Middleware, תקן אותה והרץ שוב.",
+            "code": "# @app.middleware('http')",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3898,6 +5702,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא OpenAPI & Docs.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from pydantic import BaseModel\n\nclass HealthResponse(BaseModel):\n    ok: bool\n\n@app.get(\n    \"/health\",\n    response_model=HealthResponse,\n    summary=\"Health check\",\n)\ndef health():\n    return {\"ok\": True}",
+          "challenge_solution": "# FastAPI exposes:\n# /docs\n# /redoc\n# /openapi.json\n#\n# Add response_model, descriptions, tags and examples so the schema is useful to clients.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי OpenAPI & Docs פותר.",
+            "עבור על התחביר המרכזי: Swagger, ReDoc, schemas, examples.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-OpenAPI & Docs, תקן אותה והרץ שוב.",
+            "code": "# /docs and /openapi.json",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3944,6 +5770,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא File Uploads.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from fastapi import UploadFile, File\n\n@app.post(\"/upload\")\nasync def upload(file: UploadFile = File(...)):\n    content = await file.read()\n    return {\n        \"filename\": file.filename,\n        \"size\": len(content),\n    }",
+          "challenge_solution": "# Production considerations:\n# - validate content type\n# - enforce size limits\n# - stream large files\n# - randomize server-side storage names\n# - never trust client filenames\n# - scan untrusted content when required",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי File Uploads פותר.",
+            "עבור על התחביר המרכזי: UploadFile, multipart.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-File Uploads, תקן אותה והרץ שוב.",
+            "code": "# async def upload(file: UploadFile)",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -3990,6 +5838,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Background tasks.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from fastapi import BackgroundTasks\n\ndef write_audit(message: str):\n    print(message)\n\n@app.post(\"/users\")\ndef create_user(background_tasks: BackgroundTasks):\n    background_tasks.add_task(write_audit, \"user created\")\n    return {\"ok\": True}",
+          "challenge_solution": "# BackgroundTasks is fine for small in-process work.\n# For durable/heavy jobs use a queue/worker system, e.g. Celery/RQ/managed queues.\n# The API process can restart; in-process background work is not a durable job queue.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Background tasks פותר.",
+            "עבור על התחביר המרכזי: BackgroundTasks and limits.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Background tasks, תקן אותה והרץ שוב.",
+            "code": "from fastapi import BackgroundTasks",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4036,6 +5906,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא WebSockets.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from fastapi import WebSocket\n\n@app.websocket(\"/ws\")\nasync def websocket_endpoint(ws: WebSocket):\n    await ws.accept()\n    while True:\n        message = await ws.receive_text()\n        await ws.send_text(f\"echo: {message}\")",
+          "challenge_solution": "# Real systems also need:\n# - disconnect handling\n# - authentication\n# - connection registry\n# - broadcast strategy\n# - backpressure\n# - multiple server instances / shared pub-sub",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי WebSockets פותר.",
+            "עבור על התחביר המרכזי: persistent connections, realtime basics.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-WebSockets, תקן אותה והרץ שוב.",
+            "code": "from fastapi import WebSocket",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -4090,6 +5982,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא sync vs async.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import asyncio\n\nasync def task(name):\n    await asyncio.sleep(1)\n    return name\n\nasync def main():\n    results = await asyncio.gather(\n        task(\"a\"),\n        task(\"b\"),\n    )\n    print(results)\n\nasyncio.run(main())",
+          "challenge_solution": "import asyncio\nfrom time import perf_counter\n\nasync def wait_one():\n    await asyncio.sleep(1)\n\nasync def main():\n    start = perf_counter()\n    await asyncio.gather(wait_one(), wait_one())\n    print(round(perf_counter() - start, 1))  # ~1.0, not ~2.0\n\nasyncio.run(main())",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי sync vs async פותר.",
+            "עבור על התחביר המרכזי: blocking, event loop, cooperative multitasking.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-sync vs async, תקן אותה והרץ שוב.",
+            "code": "import asyncio\nasync def main():\n    await asyncio.sleep(1)\nasyncio.run(main())",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4136,6 +6050,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא asyncio tasks.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import asyncio\n\nasync def fetch(name, delay):\n    await asyncio.sleep(delay)\n    return name\n\nasync def main():\n    a = asyncio.create_task(fetch(\"A\", 0.2))\n    b = asyncio.create_task(fetch(\"B\", 0.1))\n    print(await a, await b)\n\nasyncio.run(main())",
+          "challenge_solution": "import asyncio\n\nasync def main():\n    tasks = [asyncio.create_task(asyncio.sleep(10)) for _ in range(2)]\n    for task in tasks:\n        task.cancel()\n\n    results = await asyncio.gather(*tasks, return_exceptions=True)\n    print(results)\n\nasyncio.run(main())",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי asyncio tasks פותר.",
+            "עבור על התחביר המרכזי: create_task, gather, cancellation.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-asyncio tasks, תקן אותה והרץ שוב.",
+            "code": "results = await asyncio.gather(fetch_a(), fetch_b())",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4182,6 +6118,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Timeouts.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import asyncio\n\nasync def slow():\n    await asyncio.sleep(2)\n\nasync def main():\n    try:\n        async with asyncio.timeout(0.1):\n            await slow()\n    except TimeoutError:\n        print(\"timed out\")\n\nasyncio.run(main())",
+          "challenge_solution": "import asyncio\n\nasync def call_with_timeout(coro, seconds):\n    try:\n        async with asyncio.timeout(seconds):\n            return await coro\n    except TimeoutError:\n        return None",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Timeouts פותר.",
+            "עבור על התחביר המרכזי: asyncio.timeout, cancellation safety.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Timeouts, תקן אותה והרץ שוב.",
+            "code": "import asyncio\n# async with asyncio.timeout(2): ...",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4228,6 +6186,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Threads.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from concurrent.futures import ThreadPoolExecutor\n\ndef blocking_io(value):\n    return value * 2\n\nwith ThreadPoolExecutor(max_workers=4) as pool:\n    results = list(pool.map(blocking_io, [1, 2, 3]))\n\nprint(results)",
+          "challenge_solution": "# Threads are useful mainly when work waits on blocking I/O.\n# They do not automatically accelerate pure Python CPU-bound loops because of the GIL in traditional CPython builds.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Threads פותר.",
+            "עבור על התחביר המרכזי: ThreadPoolExecutor, GIL concepts.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Threads, תקן אותה והרץ שוב.",
+            "code": "from concurrent.futures import ThreadPoolExecutor",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4274,6 +6254,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Processes.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from concurrent.futures import ProcessPoolExecutor\n\ndef square(number):\n    return number * number\n\nif __name__ == \"__main__\":\n    with ProcessPoolExecutor() as pool:\n        print(list(pool.map(square, [1, 2, 3, 4])))",
+          "challenge_solution": "# Processes trade memory/serialization overhead for real parallel CPU work.\n# Use them for sufficiently heavy CPU-bound tasks, not tiny operations.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Processes פותר.",
+            "עבור על התחביר המרכזי: ProcessPoolExecutor, CPU-bound work.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Processes, תקן אותה והרץ שוב.",
+            "code": "from concurrent.futures import ProcessPoolExecutor",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4320,6 +6322,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Profiling.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from time import perf_counter\n\nstart = perf_counter()\ntotal = sum(range(1_000_000))\nelapsed = perf_counter() - start\n\nprint(total)\nprint(elapsed)",
+          "challenge_solution": "# CLI:\n# python -m cProfile -s cumulative app.py\n#\n# Optimize only after identifying an actual hot path.\n# Re-measure after each change.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Profiling פותר.",
+            "עבור על התחביר המרכזי: timeit, cProfile, hot paths.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Profiling, תקן אותה והרץ שוב.",
+            "code": "python -m cProfile app.py",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4366,6 +6390,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Caching.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from functools import lru_cache\n\n@lru_cache(maxsize=128)\ndef fibonacci(n):\n    if n < 2:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\nprint(fibonacci(30))\nprint(fibonacci.cache_info())",
+          "challenge_solution": "# Cache only when staleness and invalidation rules are understood.\n# External API/database results often need TTL-based caches; pure deterministic functions are simpler.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Caching פותר.",
+            "עבור על התחביר המרכזי: functools.cache/lru_cache, external cache concepts.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Caching, תקן אותה והרץ שוב.",
+            "code": "from functools import lru_cache\n@lru_cache\ndef f(x): return x*x",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -4420,6 +6466,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Password security.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Correct conceptual flow:\n# password from user\n# -> password hashing function (Argon2id/bcrypt/scrypt)\n# -> store only hash\n# -> on login verify password against hash\n#\n# Never store plaintext passwords.\n\nprint(\"hash, don't encrypt, login passwords\")",
+          "challenge_solution": "# Also consider:\n# - per-password salts (handled by good libraries)\n# - rate limiting\n# - breached-password checks\n# - MFA\n# - secure reset tokens\n# - password hash upgrades over time",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Password security פותר.",
+            "עבור על התחביר המרכזי: hashing vs encryption, salts, Argon2/bcrypt concepts.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Password security, תקן אותה והרץ שוב.",
+            "code": "# never store plaintext passwords",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4466,6 +6534,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא JWT.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# JWT conceptual claims:\npayload = {\n    \"sub\": \"user-7\",\n    \"exp\": 9999999999,\n    \"scope\": [\"read\"],\n}\n\nprint(payload[\"sub\"])\n\n# Signature protects integrity; JWT contents are not automatically secret.",
+          "challenge_solution": "# Access token: short-lived.\n# Refresh token: longer-lived, revocable/rotatable.\n# Validate signature, issuer/audience if used, and expiry.\n# Do not blindly trust decoded claims before verification.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי JWT פותר.",
+            "עבור על התחביר המרכזי: claims, signature, expiry, refresh concepts.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-JWT, תקן אותה והרץ שוב.",
+            "code": "# access token + exp + sub",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4512,6 +6602,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא OAuth2 concepts.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Resource server receives:\n# Authorization: Bearer <access-token>\n#\n# It validates the token and required scopes before serving the resource.\n\nrequired_scope = \"users:read\"\ntoken_scopes = {\"users:read\", \"profile\"}\n\nprint(required_scope in token_scopes)",
+          "challenge_solution": "# For third-party/user authorization, use the appropriate OAuth flow.\n# OAuth is authorization; OIDC adds an identity layer for authentication.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי OAuth2 concepts פותר.",
+            "עבור על התחביר המרכזי: authorization flows, scopes, bearer tokens.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-OAuth2 concepts, תקן אותה והרץ שוב.",
+            "code": "# Authorization: Bearer <token>",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4558,6 +6670,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא RBAC/ABAC.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def can_delete(user):\n    return user[\"role\"] == \"admin\"\n\nprint(can_delete({\"role\": \"admin\"}))\nprint(can_delete({\"role\": \"viewer\"}))",
+          "challenge_solution": "def can_edit(user, document):\n    if user[\"role\"] == \"admin\":\n        return True\n    return document[\"owner_id\"] == user[\"id\"]\n\nprint(can_edit({\"id\": 7, \"role\": \"user\"}, {\"owner_id\": 7}))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי RBAC/ABAC פותר.",
+            "עבור על התחביר המרכזי: roles vs attributes, authorization checks.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-RBAC/ABAC, תקן אותה והרץ שוב.",
+            "code": "def can_delete(user, resource): ...",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4604,6 +6738,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא CORS & CSRF.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# CORS decides which browser origins may call your API.\n# Configure explicit origins instead of '*' when credentials are involved.\n\nallowed_origins = {\n    \"https://app.example.com\",\n}\n\nprint(\"https://app.example.com\" in allowed_origins)",
+          "challenge_solution": "# CSRF is especially relevant when browsers automatically attach auth credentials such as cookies.\n# Bearer tokens explicitly added by JS have a different threat profile.\n# SameSite cookies + CSRF tokens are common defenses.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי CORS & CSRF פותר.",
+            "עבור על התחביר המרכזי: origins, credentials, cookie vs bearer risks.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-CORS & CSRF, תקן אותה והרץ שוב.",
+            "code": "# configure allowed origins explicitly",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4650,6 +6806,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Validation & Injection.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# SQL parameter binding:\nuser_id = 7\nquery = \"SELECT * FROM users WHERE id = ?\"\nparams = (user_id,)\n\nprint(query, params)\n\n# Do not build SQL from untrusted input with string concatenation.",
+          "challenge_solution": "# Trust boundaries to validate:\n# 1. HTTP body\n# 2. query/path parameters\n# 3. uploaded files\n# 4. external API responses\n# 5. database data used in sensitive contexts\n# 6. filesystem paths / shell arguments",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Validation & Injection פותר.",
+            "עבור על התחביר המרכזי: SQL injection, command injection, path traversal.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Validation & Injection, תקן אותה והרץ שוב.",
+            "code": "# use bound parameters",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4696,6 +6874,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Rate limiting.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Example policy:\nlimits = {\n    \"login\": \"5/minute/ip\",\n    \"password_reset\": \"3/hour/account\",\n    \"public_api\": \"100/minute/api-key\",\n}\n\nprint(limits)",
+          "challenge_solution": "# Return HTTP 429 when exceeded.\n# In distributed deployments, counters usually need a shared store/gateway.\n# Include abuse prevention without making legitimate retry behavior impossible.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Rate limiting פותר.",
+            "עבור על התחביר המרכזי: abuse controls, quotas, backoff.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Rate limiting, תקן אותה והרץ שוב.",
+            "code": "# 429 Too Many Requests",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4742,6 +6942,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Secrets & config.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import os\n\nclass Settings:\n    database_url = os.getenv(\"DATABASE_URL\")\n    environment = os.getenv(\"ENVIRONMENT\", \"development\")\n\nsettings = Settings()\nprint(settings.environment)",
+          "challenge_solution": "# Production:\n# - secret manager or protected environment variables\n# - rotation\n# - least privilege\n# - no secrets in Git\n# - separate dev/staging/prod credentials",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Secrets & config פותר.",
+            "עבור על התחביר המרכזי: env vars, secret managers, rotation.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Secrets & config, תקן אותה והרץ שוב.",
+            "code": "DATABASE_URL = os.getenv('DATABASE_URL')",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -4796,6 +7018,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Layered architecture.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# HTTP router\ndef create_user_endpoint(payload, service):\n    return service.create(payload)\n\n# service\nclass UserService:\n    def __init__(self, repo):\n        self.repo = repo\n\n    def create(self, payload):\n        # business rules\n        return self.repo.save(payload)",
+          "challenge_solution": "# Dependency direction:\n# router -> service -> repository interface\n#                       ^\n#                 concrete DB adapter\n#\n# Business logic should not depend directly on FastAPI or SQLAlchemy details.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Layered architecture פותר.",
+            "עבור על התחביר המרכזי: API/service/repository/domain boundaries.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Layered architecture, תקן אותה והרץ שוב.",
+            "code": "router -> service -> repository -> database",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4842,6 +7086,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Clean Architecture.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Core idea:\n# domain/application define rules and interfaces.\n# adapters implement HTTP, DB, messaging.\n#\n# dependency arrows point inward.\n\nprint(\"frameworks are implementation details around the core\")",
+          "challenge_solution": "# Example port:\nclass PaymentPort:\n    def charge(self, amount):\n        raise NotImplementedError\n\n# Adapter may use Stripe/another provider,\n# while application service depends only on PaymentPort.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Clean Architecture פותר.",
+            "עבור על התחביר המרכזי: dependency rule, ports/adapters concepts.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Clean Architecture, תקן אותה והרץ שוב.",
+            "code": "domain <- application <- adapters",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4888,6 +7154,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Repository pattern.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class UserRepository:\n    def get(self, user_id):\n        raise NotImplementedError\n\nclass MemoryUserRepository(UserRepository):\n    def __init__(self):\n        self.users = {1: {\"id\": 1, \"name\": \"Dana\"}}\n\n    def get(self, user_id):\n        return self.users.get(user_id)\n\nprint(MemoryUserRepository().get(1))",
+          "challenge_solution": "# Benefit: service tests can use a fake repository.\n# Cost: extra abstraction. Do not add it mechanically when it provides no value.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Repository pattern פותר.",
+            "עבור על התחביר המרכזי: persistence abstraction, tradeoffs.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Repository pattern, תקן אותה והרץ שוב.",
+            "code": "class UserRepository(Protocol): ...",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4934,6 +7222,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Service layer.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class UserService:\n    def __init__(self, repo):\n        self.repo = repo\n\n    def rename(self, user_id, new_name):\n        if not new_name.strip():\n            raise ValueError(\"name required\")\n        user = self.repo.get(user_id)\n        user[\"name\"] = new_name.strip()\n        return self.repo.save(user)",
+          "challenge_solution": "# Router should mainly:\n# 1. parse/validate HTTP input\n# 2. call service\n# 3. translate result/errors to HTTP response\n#\n# Business rules belong below the transport layer.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Service layer פותר.",
+            "עבור על התחביר המרכזי: business logic orchestration.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Service layer, תקן אותה והרץ שוב.",
+            "code": "class UserService:\n    def __init__(self, repo): self.repo=repo",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -4980,6 +7290,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Docker basics.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "FROM python:3.14-slim\n\nWORKDIR /app\nCOPY pyproject.toml .\nCOPY app ./app\n\nRUN pip install --no-cache-dir .\n\nCMD [\"uvicorn\", \"app.main:app\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\"]",
+          "challenge_solution": "# Production improvements:\n# - pin dependencies\n# - non-root user\n# - small build context via .dockerignore\n# - health checks at orchestration layer\n# - deterministic builds\n# - no secrets baked into image",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Docker basics פותר.",
+            "עבור על התחביר המרכזי: images, containers, Dockerfile, layers.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Docker basics, תקן אותה והרץ שוב.",
+            "code": "FROM python:3.14-slim\nWORKDIR /app\nCOPY . .",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5026,6 +7358,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Docker Compose.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "services:\n  api:\n    build: .\n    ports:\n      - \"8000:8000\"\n    environment:\n      DATABASE_URL: postgresql://app:app@db/app\n    depends_on:\n      - db\n\n  db:\n    image: postgres:17\n    environment:\n      POSTGRES_USER: app\n      POSTGRES_PASSWORD: app\n      POSTGRES_DB: app",
+          "challenge_solution": "# Compose is excellent for local integration environments.\n# Production orchestration may use ECS/Kubernetes/another managed platform instead.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Docker Compose פותר.",
+            "עבור על התחביר המרכזי: API + DB + cache concepts.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Docker Compose, תקן אותה והרץ שוב.",
+            "code": "services:\n  api:\n    build: .\n  db:\n    image: postgres",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5072,6 +7426,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא GitHub Actions.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "name: CI\n\non:\n  push:\n  pull_request:\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v5\n        with:\n          python-version: \"3.14\"\n      - run: pip install -e \".[dev]\"\n      - run: ruff check .\n      - run: pytest -q",
+          "challenge_solution": "# Add:\n# - dependency caching when useful\n# - coverage threshold\n# - build image only after tests pass\n# - protected deployment environments\n# - migrations/deploy as separate controlled jobs",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי GitHub Actions פותר.",
+            "עבור על התחביר המרכזי: workflow, test/lint/build gates.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-GitHub Actions, תקן אותה והרץ שוב.",
+            "code": "name: CI\non: [push, pull_request]",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5118,6 +7494,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Observability.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Minimum signals:\nsignals = {\n    \"logs\": [\"request_id\", \"level\", \"route\", \"error\"],\n    \"metrics\": [\"request_count\", \"latency\", \"error_rate\"],\n    \"health\": [\"/health\", \"/ready\"],\n}\n\nprint(signals)",
+          "challenge_solution": "# Traces help follow one request across services.\n# Avoid logging secrets/passwords/tokens/PII unnecessarily.\n# Alerts should be tied to user-impacting symptoms, not every noisy metric.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Observability פותר.",
+            "עבור על התחביר המרכזי: logs, metrics, traces, health/readiness.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Observability, תקן אותה והרץ שוב.",
+            "code": "# structured logs + request_id",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5164,6 +7562,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Deployment.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Safe sequence:\nsteps = [\n    \"build\",\n    \"test\",\n    \"scan/check\",\n    \"deploy compatible code\",\n    \"run migrations safely\",\n    \"health/readiness verify\",\n    \"monitor\",\n]\n\nprint(\" -> \".join(steps))",
+          "challenge_solution": "# Rollback plan must account for DB compatibility.\n# Prefer backward-compatible migrations and feature flags for risky changes.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Deployment פותר.",
+            "עבור על התחביר המרכזי: workers, reverse proxy, HTTPS, envs, migrations.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Deployment, תקן אותה והרץ שוב.",
+            "code": "# build -> test -> migrate -> deploy",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -5218,6 +7638,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Python data model.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class Money:\n    def __init__(self, amount):\n        self.amount = amount\n\n    def __repr__(self):\n        return f\"Money({self.amount})\"\n\n    def __eq__(self, other):\n        if not isinstance(other, Money):\n            return NotImplemented\n        return self.amount == other.amount\n\nprint(Money(10))",
+          "challenge_solution": "class Collection:\n    def __init__(self, values):\n        self.values = list(values)\n\n    def __len__(self):\n        return len(self.values)\n\n    def __iter__(self):\n        return iter(self.values)\n\nprint(list(Collection([1, 2, 3])))",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Python data model פותר.",
+            "עבור על התחביר המרכזי: dunder methods, protocols, repr/eq/hash.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Python data model, תקן אותה והרץ שוב.",
+            "code": "class Money:\n    def __repr__(self): return 'Money(...)'",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5264,6 +7706,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Descriptors.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class Positive:\n    def __set_name__(self, owner, name):\n        self.name = \"_\" + name\n\n    def __get__(self, obj, owner):\n        if obj is None:\n            return self\n        return getattr(obj, self.name)\n\n    def __set__(self, obj, value):\n        if value <= 0:\n            raise ValueError(\"must be positive\")\n        setattr(obj, self.name, value)\n\nclass Product:\n    price = Positive()\n\n    def __init__(self, price):\n        self.price = price\n\nprint(Product(10).price)",
+          "challenge_solution": "# property itself is implemented using the descriptor protocol.\n# Prefer property/dataclasses/validation libraries before custom descriptors unless reusable attribute behavior is truly needed.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Descriptors פותר.",
+            "עבור על התחביר המרכזי: __get__/__set__, attribute access.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Descriptors, תקן אותה והרץ שוב.",
+            "code": "class Positive:\n    def __set__(self,obj,value):\n        if value<0: raise ValueError",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5310,6 +7774,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Closures.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "def multiplier(factor):\n    def apply(value):\n        return value * factor\n    return apply\n\ndouble = multiplier(2)\nprint(double(5))",
+          "challenge_solution": "def make_counter():\n    count = 0\n\n    def next_value():\n        nonlocal count\n        count += 1\n        return count\n\n    return next_value\n\ncounter = make_counter()\nprint(counter(), counter())",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Closures פותר.",
+            "עבור על התחביר המרכזי: free variables, nonlocal, function factories.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Closures, תקן אותה והרץ שוב.",
+            "code": "def multiplier(k):\n    return lambda x: x*k",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5356,6 +7842,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Memory model.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import copy\n\noriginal = [[1], [2]]\nshallow = original.copy()\ndeep = copy.deepcopy(original)\n\noriginal[0].append(99)\n\nprint(shallow)  # nested list shared\nprint(deep)     # independent nested list",
+          "challenge_solution": "def append_bad(value, target=[]):\n    target.append(value)\n    return target\n\nprint(append_bad(1))\nprint(append_bad(2))  # same default list reused\n\ndef append_good(value, target=None):\n    if target is None:\n        target = []\n    target.append(value)\n    return target",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Memory model פותר.",
+            "עבור על התחביר המרכזי: references, mutability, shallow/deep copy.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Memory model, תקן אותה והרץ שוב.",
+            "code": "import copy",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5402,6 +7910,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא GIL & free-threading concepts.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Traditional CPython:\n# one thread executes Python bytecode under the GIL at a time.\n# Threads can still help I/O-bound workloads.\n#\n# Free-threaded CPython builds change parts of this model,\n# so profile the exact runtime/build you deploy.\n\nprint(\"choose concurrency from workload + runtime\")",
+          "challenge_solution": "# CPU-bound pure Python:\n# compare sequential vs process pool.\n# I/O-bound blocking calls:\n# compare threads.\n# async-compatible I/O:\n# compare asyncio.\n# Always benchmark the real workload.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי GIL & free-threading concepts פותר.",
+            "עבור על התחביר המרכזי: CPython execution model, concurrency implications.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-GIL & free-threading concepts, תקן אותה והרץ שוב.",
+            "code": "# implementation details matter for performance",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5448,6 +7978,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Introspection.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import inspect\n\ndef add(a: int, b: int = 0) -> int:\n    return a + b\n\nprint(inspect.signature(add))\nprint(add.__annotations__)",
+          "challenge_solution": "plugins = {}\n\ndef register(name):\n    def decorator(fn):\n        plugins[name] = fn\n        return fn\n    return decorator\n\n@register(\"hello\")\ndef hello():\n    return \"hi\"\n\nprint(plugins[\"hello\"]())",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Introspection פותר.",
+            "עבור על התחביר המרכזי: inspect, getattr/setattr, vars, callable.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Introspection, תקן אותה והרץ שוב.",
+            "code": "import inspect\nprint(inspect.signature(len))",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5494,6 +8046,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Metaclasses.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "class RegistryMeta(type):\n    registry = []\n\n    def __new__(mcls, name, bases, namespace):\n        cls = super().__new__(mcls, name, bases, namespace)\n        mcls.registry.append(cls)\n        return cls\n\nclass Base(metaclass=RegistryMeta):\n    pass\n\nclass Child(Base):\n    pass\n\nprint([c.__name__ for c in RegistryMeta.registry])",
+          "challenge_solution": "# Often simpler:\nregistry = []\n\ndef register(cls):\n    registry.append(cls)\n    return cls\n\n@register\nclass Service:\n    pass\n\nprint(registry)\n\n# Prefer the simplest mechanism that expresses the requirement.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Metaclasses פותר.",
+            "עבור על התחביר המרכזי: class creation hooks, when not to use them.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Metaclasses, תקן אותה והרץ שוב.",
+            "code": "class Meta(type):\n    pass",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5540,6 +8114,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Performance engineering.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "from timeit import timeit\n\nloop = timeit(\"sum([x*x for x in range(1000)])\", number=1000)\ngen = timeit(\"sum(x*x for x in range(1000))\", number=1000)\n\nprint(loop, gen)",
+          "challenge_solution": "# Performance workflow:\n# 1. define metric\n# 2. reproduce workload\n# 3. profile\n# 4. optimize hot path\n# 5. verify correctness\n# 6. benchmark again\n# 7. monitor in production",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Performance engineering פותר.",
+            "עבור על התחביר המרכזי: complexity, allocation, vectorization concepts.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Performance engineering, תקן אותה והרץ שוב.",
+            "code": "sum(range(1_000_000))",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]
@@ -5594,6 +8190,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא CLI Task Manager.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Suggested architecture:\n# taskapp/\n#   cli.py\n#   models.py\n#   repository.py\n#   service.py\n# tests/\n#\n# Commands:\n# task add \"Learn Python\"\n# task list\n# task done 1\n# task delete 1",
+          "challenge_solution": "# Definition of done:\n# - persistent storage (JSON/SQLite)\n# - validation\n# - pytest tests\n# - pyproject.toml\n# - clear CLI errors\n# - README with installation/examples",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי CLI Task Manager פותר.",
+            "עבור על התחביר המרכזי: CLI, files/DB, validation, tests, packaging.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-CLI Task Manager, תקן אותה והרץ שוב.",
+            "code": "# deliverable: installable CLI",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5640,6 +8258,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא REST Task API.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Endpoints:\n# POST   /tasks\n# GET    /tasks\n# GET    /tasks/{id}\n# PATCH  /tasks/{id}\n# DELETE /tasks/{id}\n#\n# Stack:\n# FastAPI + Pydantic + SQLAlchemy + Alembic + PostgreSQL + pytest",
+          "challenge_solution": "# Add:\n# - pagination/filtering\n# - response models\n# - integration tests\n# - 404/409 handling\n# - created_at/updated_at\n# - Docker compose for local DB",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי REST Task API פותר.",
+            "עבור על התחביר המרכזי: FastAPI, Pydantic, SQLAlchemy, migrations, tests.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-REST Task API, תקן אותה והרץ שוב.",
+            "code": "# deliverable: documented REST API",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5686,6 +8326,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Auth Service.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Endpoints:\n# POST /auth/register\n# POST /auth/login\n# POST /auth/refresh\n# GET  /auth/me\n#\n# Store password hashes only.\n# Use short-lived access token + controlled refresh strategy.",
+          "challenge_solution": "# Add:\n# - unique email\n# - password policy\n# - login rate limit\n# - RBAC\n# - token expiry tests\n# - invalid/revoked refresh handling\n# - audit logs without secrets",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Auth Service פותר.",
+            "עבור על התחביר המרכזי: JWT/OAuth2 concepts, RBAC, rate limiting.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Auth Service, תקן אותה והרץ שוב.",
+            "code": "# deliverable: auth module",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5732,6 +8394,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Async Aggregator.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "import asyncio\n\nasync def aggregate(fetchers):\n    results = await asyncio.gather(\n        *(fetcher() for fetcher in fetchers),\n        return_exceptions=True,\n    )\n    return results",
+          "challenge_solution": "# Production requirements:\n# - per-provider timeout\n# - retries with bounded backoff where safe\n# - concurrency limits\n# - caching\n# - partial failure policy\n# - metrics per provider",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Async Aggregator פותר.",
+            "עבור על התחביר המרכזי: async HTTP, timeouts, retries, caching.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Async Aggregator, תקן אותה והרץ שוב.",
+            "code": "# deliverable: concurrent aggregator",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5778,6 +8462,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Production API.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Checklist:\n# FastAPI\n# PostgreSQL\n# migrations\n# pytest\n# structured logging\n# /health + /ready\n# Docker\n# CI\n# env-based config\n# authentication/authorization where required",
+          "challenge_solution": "# Deployment quality gate:\n# - tests pass\n# - lint/type checks pass\n# - image builds\n# - migrations reviewed\n# - secrets configured\n# - rollback plan exists\n# - dashboards/alerts ready",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Production API פותר.",
+            "עבור על התחביר המרכזי: Docker, CI, config, logging, health, deployment.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Production API, תקן אותה והרץ שוב.",
+            "code": "# deliverable: deployable service",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5824,6 +8530,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Testing Portfolio.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Portfolio should demonstrate:\n# unit tests\n# integration tests\n# API tests\n# DB tests\n# fixtures/factories\n# mocks only at real boundaries\n# parametrization\n# coverage report\n# CI quality gate",
+          "challenge_solution": "# Explain WHY each test level exists.\n# A portfolio with 100% meaningless coverage is weaker than a smaller suite that protects critical behavior.",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Testing Portfolio פותר.",
+            "עבור על התחביר המרכזי: unit/integration/e2e strategy, factories, mocks, coverage.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Testing Portfolio, תקן אותה והרץ שוב.",
+            "code": "# deliverable: serious test suite",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         },
         {
@@ -5870,6 +8598,28 @@ window.COURSE_DATA = {
             "prompt": "השלם את החסר בדוגמה בנושא Final Architecture Project.",
             "code": "language = 'Python'\nprint(____)",
             "answer": "language"
+          },
+          "exercise_solution": "# Suggested product:\n# users + projects + subscriptions/tasks\n#\n# layers:\n# api/\n# application/\n# domain/\n# infrastructure/\n#\n# include DB, auth, background jobs, tests, docs and CI.",
+          "challenge_solution": "# Final acceptance criteria:\n# 1. clear architecture boundaries\n# 2. documented API\n# 3. PostgreSQL + migrations\n# 4. auth + authorization\n# 5. automated tests\n# 6. Docker\n# 7. CI/CD\n# 8. observability\n# 9. failure handling\n# 10. production/rollback plan",
+          "walkthrough": [
+            "זהה קודם את הבעיה שהכלי Final Architecture Project פותר.",
+            "עבור על התחביר המרכזי: clean boundaries, DB, auth, background work, tests, docs.",
+            "הרץ את הדוגמה כפי שהיא ורשום לעצמך מה אתה מצפה לראות לפני הלחיצה על Run.",
+            "שנה ערך אחד או תנאי אחד ונסה לנבא את הפלט מחדש.",
+            "בצע את תרגיל ההשלמה בלי לפתוח פתרון.",
+            "עבור לתרגיל העצמאי ול-Challenge ורק לאחר ניסיון אמיתי השווה לפתרון."
+          ],
+          "mastery": [
+            "אני מסוגל להסביר את הנושא ללא העתקה.",
+            "אני מסוגל לכתוב דוגמה חדשה מאפס.",
+            "אני יודע לזהות לפחות טעות נפוצה אחת.",
+            "אני מסוגל לפתור את תרגיל ההשלמה.",
+            "אני מסוגל להבין את פתרון ה-Challenge ולהסביר כל שורה."
+          ],
+          "bug_hunt": {
+            "prompt": "מצא בעיה אפשרית בקוד הבא הקשור ל-Final Architecture Project, תקן אותה והרץ שוב.",
+            "code": "# deliverable: portfolio-grade backend",
+            "hint": "נסה לשנות טיפוס, ערך גבול, None/ריק, או תנאי ולבדוק האם ההתנהגות עדיין נכונה."
           }
         }
       ]

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#07111f">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Python Mastery">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="./icons/icon-180.png">
@@ -12,35 +13,72 @@
 <title>Python Mastery</title>
 </head>
 <body>
-<header class="topbar">
-<div><div class="eyebrow">LEARN • CODE • TEST • BUILD</div><h1>Python Mastery</h1><p>קורס אינטראקטיבי מפייתון בסיסי ועד FastAPI ו-Production.</p></div>
-<div class="progress-ring" id="progressRing"><span id="progressPct">0%</span></div>
+<header class="topbar" id="top">
+  <div>
+    <div class="eyebrow">ZERO → PRODUCTION</div>
+    <h1>Python Mastery</h1>
+    <p>לומדים, כותבים, מריצים, מתקנים ובודקים — עד FastAPI, pytest, SQL, Async, Security, Docker ו-CI/CD.</p>
+  </div>
+  <div class="progress-ring" id="progressRing"><span id="progressPct">0%</span></div>
 </header>
+
 <main>
-<section class="hero-card">
-<div><h2>לומדים דרך קוד</h2><p id="summary"></p></div>
-<div class="hero-actions"><button id="continueBtn">המשך לשיעור הבא</button><button class="secondary" id="playgroundBtn">פתח Python Lab</button></div>
-</section>
-<section class="controls">
-<input id="search" type="search" placeholder="חפש FastAPI, pytest, decorators...">
-<select id="difficulty"><option value="">כל הרמות</option><option>Beginner</option><option>Beginner+</option><option>Intermediate</option><option>Intermediate+</option><option>Advanced</option><option>Expert</option></select>
-</section>
-<section id="levels"></section>
+  <section class="hero-card">
+    <div>
+      <h2>מסלול לימוד מלא</h2>
+      <p id="summary"></p>
+      <div class="mastery-summary" id="masterySummary"></div>
+    </div>
+    <div class="hero-actions">
+      <button id="continueBtn">המשך לשיעור הבא</button>
+      <button class="secondary" id="playgroundBtn">⌨️ Python Lab</button>
+    </div>
+  </section>
+
+  <section class="controls">
+    <input id="search" type="search" placeholder="חפש pytest, FastAPI, OOP, async...">
+    <select id="difficulty">
+      <option value="">כל הרמות</option>
+      <option>Beginner</option><option>Beginner+</option><option>Intermediate</option>
+      <option>Intermediate+</option><option>Advanced</option><option>Expert</option>
+    </select>
+  </section>
+
+  <section id="levels"></section>
 </main>
-<dialog id="lessonDialog"><article id="lessonContent"></article><form method="dialog"><button class="close">סגור</button></form></dialog>
+
+<dialog id="lessonDialog">
+  <article id="lessonContent"></article>
+  <form method="dialog"><button class="close">סגור שיעור</button></form>
+</dialog>
+
 <dialog id="labDialog">
-<section class="lab-shell">
-<div class="lab-head"><div><div class="eyebrow">REAL PYTHON IN THE BROWSER</div><h2>Python Lab</h2></div><span id="pyStatus" class="badge">מוכן לטעינה</span></div>
-<p class="muted">כתוב Python ולחץ Run. בהרצה הראשונה מנוע Pyodide יורד מהאינטרנט.</p>
-<textarea id="codeEditor" spellcheck="false">name = "Python"
+  <section class="lab-shell">
+    <div class="lab-head">
+      <div><div class="eyebrow">BROWSER PYTHON</div><h2>Python Lab</h2></div>
+      <span id="pyStatus" class="badge">מוכן לטעינה</span>
+    </div>
+    <p class="muted">ערוך קוד והריץ אותו ישירות באייפון. בהרצה הראשונה Pyodide נטען מהאינטרנט.</p>
+    <textarea id="codeEditor" spellcheck="false">name = "Python"
 for i in range(3):
     print(i, name)</textarea>
-<div class="lab-actions"><button type="button" id="runCode">▶ Run</button><button type="button" class="secondary" id="clearOutput">נקה פלט</button></div>
-<pre id="codeOutput" aria-live="polite">הפלט יופיע כאן…</pre>
-</section>
-<form method="dialog"><button class="close">סגור Lab</button></form>
+    <div class="lab-actions">
+      <button type="button" id="runCode">▶ Run</button>
+      <button type="button" class="secondary" id="resetLab">אפס קוד</button>
+      <button type="button" class="secondary" id="clearOutput">נקה פלט</button>
+    </div>
+    <pre id="codeOutput" aria-live="polite">הפלט יופיע כאן…</pre>
+  </section>
+  <form method="dialog"><button class="close">סגור Lab</button></form>
 </dialog>
-<nav class="bottom-nav"><button id="homeBtn">🏠<span>בית</span></button><button id="navContinue">▶️<span>המשך</span></button><button id="navLab">⌨️<span>Lab</span></button></nav>
+
+<nav class="bottom-nav">
+  <button id="homeBtn">🏠<span>בית</span></button>
+  <button id="navContinue">▶️<span>המשך</span></button>
+  <button id="navLab">⌨️<span>Lab</span></button>
+</nav>
+
 <script src="./curriculum.js"></script>
 <script src="./app.js"></script>
-</body></html>
+</body>
+</html>

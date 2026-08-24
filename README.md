@@ -1,48 +1,65 @@
-# Python Mastery — Zero to Production
+# Python Mastery — Complete Interactive Edition
 
-A mobile-first PWA course designed for GitHub Pages.
+Mobile-first PWA course for GitHub Pages.
 
-## Course scope
+## Scope
 - 15 levels
 - 125 lessons
-- Python target: 3.14
-- Core Python, OOP, typing, files, logging, pytest, SQL, SQLAlchemy, FastAPI, async, security, Docker, CI/CD, architecture, performance and capstones.
+- Fundamentals → professional backend engineering
+- pytest
+- SQL / SQLAlchemy / migrations
+- FastAPI
+- async/concurrency
+- security/auth
+- architecture
+- Docker / GitHub Actions
+- production engineering
+- advanced Python internals
+- capstone projects
 
-## Publish to GitHub Pages
-1. Copy all files in this folder to the root of your GitHub Pages repository (or to `/docs` if your Pages source is configured to `/docs`).
-2. Commit and push.
-3. In GitHub: Settings → Pages → choose the branch/folder that contains `index.html`.
-4. Open the HTTPS Pages URL once and refresh after deployment.
-5. On iPhone Safari: Share → Add to Home Screen → Add.
+## Every lesson now contains
+1. Learning sequence
+2. Objectives
+3. Why the topic matters
+4. Deep explanation
+5. Working code example
+6. Common mistakes
+7. Fill-in-the-code exercise
+8. Bug Hunt
+9. Main exercise
+10. Hidden complete exercise solution
+11. Challenge
+12. Hidden complete challenge solution
+13. Review quiz with answers
+14. Mastery checklist
+15. Browser Python Lab integration
 
-## Important GitHub Pages/PWA detail
-All URLs use relative paths (`./...`) so the app works when GitHub Pages serves it below `https://username.github.io/repository-name/`.
+## Python Lab
+The app uses Pyodide to execute real Python in the browser.
+The first Python execution requires an internet connection so the Pyodide runtime can load.
 
-## Local preview
-A service worker normally needs HTTP/HTTPS rather than `file://`.
+## GitHub Pages
+Upload the contents of this folder to the branch/folder published by GitHub Pages.
 
-```bash
-python -m http.server 8000
+Important structure:
+
+```text
+index.html
+app.js
+styles.css
+curriculum.js
+manifest.webmanifest
+sw.js
+icons/
+  icon-180.png
+  icon-192.png
+  icon-512.png
 ```
 
-Then open `http://localhost:8000`.
+All local asset paths are relative, so project-style GitHub Pages URLs are supported.
 
-## Progress
-Completed lessons are stored locally in the browser with localStorage. No account or backend is required.
+## iPhone
+Open the GitHub Pages URL in Safari:
+Share → Add to Home Screen → Add
 
-## Editing the course
-The curriculum is in `curriculum.js`. Each lesson has:
-- title
-- concepts
-- theory
-- code example
-- exercise
-- self-check
-- quiz
-
-## Suggested learning rule
-Do not mark a lesson complete until you can:
-1. explain it without notes,
-2. write a fresh example,
-3. handle at least one edge case,
-4. test it.
+Progress and mastery state are stored locally in the browser.
