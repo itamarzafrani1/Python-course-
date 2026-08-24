@@ -18,3 +18,14 @@ pre{direction:ltr;text-align:left;white-space:pre-wrap;background:#050b12;border
 .complete{width:100%;margin-top:20px;background:var(--ok)}.close{width:100%;border-radius:0;background:#172a3e;color:var(--text)}
 .bottom-nav{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(6,14,24,.92);border-top:1px solid var(--border);padding:8px 16px max(8px,env(safe-area-inset-bottom));grid-template-columns:repeat(3,1fr);z-index:9;backdrop-filter:blur(16px)}.bottom-nav button{background:transparent;color:var(--text);padding:7px;font-size:18px}.bottom-nav span{display:block;font-size:10px;color:var(--muted);margin-top:2px}
 @media(max-width:700px){.topbar{align-items:flex-start}.progress-ring{min-width:68px;height:68px}.hero-card{display:block}.hero-actions{margin-top:16px}.controls{grid-template-columns:1fr}.lesson-list{grid-template-columns:1fr}.bottom-nav{display:grid}main,.topbar{padding-left:14px;padding-right:14px}}
+
+.muted{color:var(--muted)} .lesson-section{margin-top:25px}.lesson-section h3{color:var(--accent);margin-bottom:10px}
+.objectives,.deep-list,.mistake-list{padding-right:20px}.objectives li,.deep-list li,.mistake-list li{margin:7px 0;line-height:1.65}
+.callout{background:#0e2235;border:1px solid var(--border);padding:16px;border-radius:15px;line-height:1.65}.warning{border-right:4px solid #fb7185}
+.fill-card{background:#0a1c2c;border:1px solid var(--border);padding:16px;border-radius:16px}
+.fill-card textarea,.lab-shell textarea{direction:ltr;text-align:left;width:100%;min-height:135px;background:#050b12;color:#d7f8ff;border:1px solid #263c54;border-radius:12px;padding:14px;font:15px/1.55 "SFMono-Regular",Consolas,monospace;resize:vertical}
+.fill-result{margin-top:10px;min-height:24px;font-weight:800}.fill-result.ok{color:var(--ok)}.fill-result.bad{color:#fb7185}
+.lab-shell{padding:22px}.lab-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.lab-shell textarea{min-height:280px;margin-top:12px}
+.lab-actions,.mini-actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.open-lab{background:var(--accent2)}
+#codeOutput{min-height:120px;white-space:pre-wrap}.level-progress{height:6px;background:#172a3e;border-radius:999px;margin-top:11px;overflow:hidden}.level-progress>i{display:block;height:100%;background:var(--ok)}
+@media(max-width:700px){#lessonContent{padding:18px}.lab-shell{padding:16px}.lab-head{display:block}}
